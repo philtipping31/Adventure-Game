@@ -2,16 +2,15 @@ import time
 
 
 def intro():
-    print("         /\     /\")
-    print("     ___| |_____| |___")
+    print(".       /\\.   /\\")
+    print("     ___| |____| |____")
     print("    /                 \\")
     print("   /     Welcome to    \\")
-    print("  /                     \\")
-    print("  |   The Haunted House! |")
-    print("  |     ____     ___     |    0 ")
-    print("  |    | .  |   |___|    |   /|\")
-    print("__|____|____|____________|__ / \")
+    print("  /_____________________\\")
+    print("  | The Haunted Mansion!|")
+    print("  |                     |")
+    print("  |     ____     ___    |")
+    print("  |    | .  |   |___|   |")
+    print("__|____|____|___________|__")
     print("")
     time.sleep(2)
-
-    
