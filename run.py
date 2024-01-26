@@ -1,3 +1,17 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import time
+
+
+def intro():
+    print("         /\     /\")
+    print("     ___| |_____| |___")
+    print("    /                 \\")
+    print("   /     Welcome to    \\")
+    print("  /                     \\")
+    print("  |   The Haunted House! |")
+    print("  |     ____     ___     |    0 ")
+    print("  |    | .  |   |___|    |   /|\")
+    print("__|____|____|____________|__ / \")
+    print("")
+    time.sleep(2)
+
+    
