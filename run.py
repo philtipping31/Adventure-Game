@@ -12,9 +12,9 @@ def intro():
     print("  /_____________________\\")
     print("  | The Haunted Mansion!|")
     print("  |                     |")
-    print("  |     ____     ___    |")
-    print("  |    | .  |   |___|   |")
-    print("__|____|____|___________|__")
+    print("  |     ____     ___    |       0")
+    print("  |    | .  |   |___|   |      /|\\")
+    print("__|____|____|___________|______/ \\")
     print("")
     time.sleep(1)
     print("Welcome to the Haunted Mansion\n")
@@ -41,7 +41,7 @@ def start_game():
 
     while True:
         escape_mansion = input("Would you like to attempt your escape"
-                                " from the HAUNTED MANSION? (yes/no):\n>")
+                                " from the HAUNTED MANSION? (yes/no):\n> ")
         if escape_mansion == "no":
             print("\nYou have accepted your fate...\n")
             time.sleep(1)
@@ -73,7 +73,7 @@ def hallway():
     print(" - The stairs to the top floor (6).")
     print("")
     time.sleep(2)
-    chooseRoute = input("What route do you choose? (1 to 6)\n>")
+    chooseRoute = input("What route do you choose? (1 to 6)\n> ")
     if chooseRoute == "1":
         print("you chose option 1")
     elif chooseRoute == "2":
@@ -88,6 +88,7 @@ def hallway():
         print("you chose option 6")
     else:
         print("Wrong input. Please choose a number between 1 and 6")
+        hallway()
 
 
 intro()
