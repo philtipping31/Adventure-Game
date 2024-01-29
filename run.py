@@ -1,17 +1,11 @@
 import time
 
-# Global variables
-global lighter
-lighter = "no"
-global backpack
-backpack = "no"
-
 
 def intro():
     """
     Displays the game intro and sets the scene.
     """
-    print("        /\\     /\\")
+    print("         /\\    /\\")
     print("     ___| |____| |____")
     print("    /                 \\")
     print("   /     Welcome to    \\")
@@ -46,8 +40,8 @@ def start_game():
     """
 
     while True:
-        escape_mansion = input("Would you like to attempt your escape" 
-                                "from the HAUNTED MANSION? (yes/no):\n")
+        escape_mansion = input("Would you like to attempt your escape"
+                                " from the HAUNTED MANSION? (yes/no):\n>")
         if escape_mansion == "no":
             print("\nYou have accepted your fate...\n")
             time.sleep(1)
@@ -57,11 +51,43 @@ def start_game():
             play_again()
             break
         elif escape_mansion == "yes":
-            choose_item()
+            hallway()
             break
         else:
             print("Wrong input. Please type 'yes' or 'no'.")
             continue
+
+
+def hallway():
+    print("\nYou are standing in the main hallway...\n")
+    time.sleep(1)
+    print("There are 5 for you to choose from...")
+    print("... or do you take the stairs?")
+    print("")
+    time.sleep(1)
+    print(" - A door to the kitchen (1),")
+    print(" - A door to the ballroom (2),")
+    print(" - A door to the library (3),")
+    print(" - A door to the dining hall (4),")
+    print(" - A door to the office (5),")
+    print(" - The stairs to the top floor (6).")
+    print("")
+    time.sleep(2)
+    chooseRoute = input("What route do you choose? (1 to 6)\n>")
+    if chooseRoute == "1":
+        print("you chose option 1")
+    elif chooseRoute == "2":
+        print("you chose option 2") 
+    elif chooseRoute == "3":
+        print("you chose option 3")
+    elif chooseRoute == "4":
+        print("you chose option 4")
+    elif chooseRoute == "5":
+        print("you chose option 5")
+    elif chooseRoute == "6":
+        print("you chose option 6")
+    else:
+        print("Wrong input. Please choose a number between 1 and 6")
 
 
 intro()
