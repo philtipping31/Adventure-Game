@@ -1,5 +1,8 @@
 import time
 
+# The backpack is your inventory for collecting items in the mansion.
+backpack = []
+
 
 def intro():
     """
@@ -41,7 +44,7 @@ def start_game():
 
     while True:
         escape_mansion = input("Would you like to attempt your escape"
-                                " from the HAUNTED MANSION? (yes/no):\n> ")
+                               " from the HAUNTED MANSION? (yes/no):\n> ")
         if escape_mansion == "no":
             print("\nYou have accepted your fate...\n")
             time.sleep(1)
@@ -59,9 +62,16 @@ def start_game():
 
 
 def hallway():
+    """
+    Tells the user after clicking 'Yes' that they are in the hallway
+    of the mansion.
+    Provides input options to the user to choose from to progress
+    through the mansion.
+    If incorrect option is chosen, function is called again.
+    """
     print("\nYou are standing in the main hallway...\n")
     time.sleep(1)
-    print("There are 5 for you to choose from...")
+    print("There are 5 doors for you to choose from...")
     print("... or do you take the stairs?")
     print("")
     time.sleep(1)
@@ -75,20 +85,47 @@ def hallway():
     time.sleep(2)
     chooseRoute = input("What route do you choose? (1 to 6)\n> ")
     if chooseRoute == "1":
-        print("you chose option 1")
+        print("You chose option 1 - Kitchen\n")
+        kitchen()
     elif chooseRoute == "2":
-        print("you chose option 2") 
+        print("You chose option 2 - Ballroom\n")
     elif chooseRoute == "3":
-        print("you chose option 3")
+        print("You chose option 3 - Library\n")
     elif chooseRoute == "4":
-        print("you chose option 4")
+        print("You chose option 4 - Dining Hall\n")
     elif chooseRoute == "5":
-        print("you chose option 5")
+        print("You chose option 5 - Office\n")
     elif chooseRoute == "6":
-        print("you chose option 6")
+        print("You chose option 6 - Staircase\n")
     else:
         print("Wrong input. Please choose a number between 1 and 6")
-        hallway()
+        chooseRoute = input("What route do you choose? (1 to 6)\n> ")
+
+
+def kitchen():
+    """
+    Called when user selects option 1 - Kitchen.
+    Displays new room info text and options a and b for user to select.
+    If incorrect input, user will be notified and given choice again.
+    """
+    time.sleep(2)
+    print("You have entered the mansions kitchen...\n")
+    time.sleep(1)
+    print("You scan the room to see if there is anything of use\n")
+    time.sleep(1)
+    print("You see a closed cupboard on the wall and also notice "
+          "a shiny box on the floor...\n")
+    time.sleep(1)
+    option = input("Do you:\n a) Open the cupboard door \n"
+                   " b) Pick up the shiny box\n>")
+    if option == "a":
+        print("You chose option a")
+    elif option == "b":
+        print("You chose option b")
+    else:
+        print("Invalid input. Please choose option a or b")
+        option = input("Do you:\n a) Open the cupboard door \n"
+                       " b) Pick up the shiny box\n>")      
 
 
 intro()
