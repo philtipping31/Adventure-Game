@@ -90,18 +90,23 @@ def hallway():
             break
         elif chooseRoute == "2":
             print("You chose option 2 - Ballroom\n")
+            ballroom()
             break
         elif chooseRoute == "3":
             print("You chose option 3 - Library\n")
+            library()
             break
         elif chooseRoute == "4":
             print("You chose option 4 - Dining Hall\n")
+            dining_hall()
             break
         elif chooseRoute == "5":
             print("You chose option 5 - Office\n")
+            office()
             break
         elif chooseRoute == "6":
             print("You chose option 6 - Staircase\n")
+            stairs()
             break
         else:
             print("Invalid input. Please choose a number between 1 and 6")
@@ -157,6 +162,7 @@ def ballroom():
     Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
+    print("You have entered the mansions Ballroom")
 
 
 def library():
@@ -165,6 +171,7 @@ def library():
     Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
+    print("You have entered the mansions Library")
 
 
 def dining_hall():
@@ -173,6 +180,7 @@ def dining_hall():
     Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
+    print("You have entered the mansions Dining Hall")
 
 
 def office():
@@ -181,6 +189,7 @@ def office():
     Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
+    print("You have entered the mansions office")
 
 
 def stairs():
@@ -189,6 +198,20 @@ def stairs():
     Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
+    print("You decided to take the stairs\n")
+    print("You've left all rooms unsearched...\n")
+    time.sleep(1)
+    print("You hear heavy breathing and footsteps...\n")
+    time.sleep(1)
+    print("In a panic you sprint up the stairs...\n")
+    print("The staircase is old and brittle and a snaps underneath you\n")
+    time.sleep(1)
+    print("You are caught by the ghostly figure chasing you and fall to "
+          "a painful death")
+    time.sleep(1)
+    print("Bad luck.\n"
+          "You have been consumed by THE HAUNTED MANSION!\n")
+    play_again()
 
 
 def play_again():
