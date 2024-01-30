@@ -81,7 +81,7 @@ def hallway():
     print(" - A door to the office (5),")
     print(" - The stairs to the top floor (6).")
     print("")
-    time.sleep(2)
+    time.sleep(1)
     while True:
         chooseRoute = input("What route do you choose? (1 to 6)\n> ")
         if chooseRoute == "1":
@@ -127,15 +127,16 @@ def kitchen():
                        " b) Pick up the shiny box\n>")
         if option == "a":
             print("You chose to open the cupboard, inside you find a"
-                  " knife. Put this in your backpack as it may come "
-                  "in useful later")
-            backpack.append("Knife")
+                  " hammer. Put this in your backpack as it may come "
+                  "in useful later\n")
+            backpack.append("Hammer")
             print("Backpack:")
             print(backpack)
             time.sleep(1)
             print("You wisely decide to ignore temptation and"
                   " leave the shiny box")
-            
+            print("You go back to the hallway to choose another door")
+            hallway()
             break
         elif option == "b":
             print("You chose to pick up the shiny box...\n"
@@ -160,7 +161,7 @@ def play_again():
     while True:
         play_again = input("Would you like to play again? (yes/no):\n")
         if play_again == "yes":
-            backpack = []
+            backpack.clear()
             intro()
             break
         elif play_again == "no":
