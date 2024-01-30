@@ -151,6 +151,46 @@ def kitchen():
             continue
 
 
+def ballroom():
+    """
+    Called when user selects option 2 - Ballroom.
+    Displays new room info text and options a and b for user to select.
+    If incorrect input, user will be notified and given choice again.
+    """
+
+
+def library():
+    """
+    Called when user selects option 3 - Library.
+    Displays new room info text and options a and b for user to select.
+    If incorrect input, user will be notified and given choice again.
+    """
+
+
+def dining_hall():
+    """
+    Called when user selects option 4 - Dining Hall.
+    Displays new room info text and options a and b for user to select.
+    If incorrect input, user will be notified and given choice again.
+    """
+
+
+def office():
+    """
+    Called when user selects option 5 - Office.
+    Displays new room info text and options a and b for user to select.
+    If incorrect input, user will be notified and given choice again.
+    """
+
+
+def stairs():
+    """
+    Called when user selects option 6 - Staircase.
+    Displays new room info text and options a and b for user to select.
+    If incorrect input, user will be notified and given choice again.
+    """
+
+
 def play_again():
     """
     Called when the player says no to playing the game
