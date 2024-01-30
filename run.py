@@ -50,14 +50,13 @@ def start_game():
             time.sleep(1)
             print("Enjoy your stay at the HAUNTED MANSION!\n")
             time.sleep(1)
-            print("GAME OVER\n")
             play_again()
             break
         elif escape_mansion == "yes":
             hallway()
             break
         else:
-            print("Wrong input. Please type 'yes' or 'no'.")
+            print("Invalid input. Please type 'yes' or 'no'.")
             continue
 
 
@@ -67,7 +66,7 @@ def hallway():
     of the mansion.
     Provides input options to the user to choose from to progress
     through the mansion.
-    If incorrect option is chosen, function is called again.
+    If incorrect option is chosen options display again.
     """
     print("\nYou are standing in the main hallway...\n")
     time.sleep(1)
@@ -105,7 +104,7 @@ def hallway():
             print("You chose option 6 - Staircase\n")
             break
         else:
-            print("Wrong input. Please choose a number between 1 and 6")
+            print("Invalid input. Please choose a number between 1 and 6")
             continue
         
 
@@ -127,14 +126,49 @@ def kitchen():
         option = input("Do you:\n a) Open the cupboard door \n"
                        " b) Pick up the shiny box\n>")
         if option == "a":
-            print("You chose option a")
+            print("You chose to open the cupboard, inside you find a"
+                  " knife. Put this in your backpack as it may come "
+                  "in useful later")
+            backpack.append("Knife")
+            print("Backpack:")
+            print(backpack)
+            time.sleep(1)
+            print("You wisely decide to ignore temptation and"
+                  " leave the shiny box")
+            
             break
         elif option == "b":
-            print("You chose option b")
-            break
+            print("You chose to pick up the shiny box...\n"
+                  " This was a hidden lever that opens a trap door,"
+                  " you fall down the trap door to your painful death\n")
+            time.sleep(1)
+            print("Bad luck.\n"
+                  "You have been consumed by THE HAUNTED MANSION!\n")
+            play_again()
         else:
             print("Invalid input. Please choose option a or b")
             continue
 
-   
+
+def play_again():
+    """
+    Called when the player says no to playing the game
+    as well as when the player wins or dies.
+    Asks user whether they would like to play again. 
+    If not, game ends. If Yes, intro function is called again.
+    """
+    while True:
+        play_again = input("Would you like to play again? (yes/no):\n")
+        if play_again == "yes":
+            backpack = []
+            intro()
+            break
+        elif play_again == "no":
+            print("\nNever mind... Thanks for playing and come back soon!\n")
+            break
+        else:
+            print("Invalid input. Please type 'yes' or 'no'.")
+            continue
+
+
 intro()
