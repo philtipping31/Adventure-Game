@@ -275,7 +275,47 @@ def library():
     print("You have entered the mansions Library\n")
     time.sleep(1)
     print("You search the room for clues or something useful\n")
-
+    print("The room is full of books but you notice a particular "
+          " book that sticks out from the rest\n")
+    time.sleep(1)
+    print("There is also a locked crate on a table in the "
+          "center of the room\n")
+    time.sleep(1)
+    print("Do you investigate or leave the library?\n")
+    print("You wait a few seconds to think...\n")
+    time.sleep(2)
+    print("1. Pick the book up from the bookshelf\n")
+    print("2. Attempt to get into the locked crate\n")
+    print("3. Leave the library\n")
+    if hammer is True:
+        print("4. Smash the crate with your hammer")
+    time.sleep(2)
+    if hammer is True:
+        decisions = "(1, 2, 3 or 4)"
+    else:
+        decisions = "(1, 2 or 3)"
+    while True:
+        try:
+            options = int(input(f"Which do you choose? {decisions}:"))
+            if options == 1:
+                print("You chose option 1")
+                break
+            elif options == 2:
+                print("You chose option 2")
+                break
+            elif options == 3:
+                print("You chose option 3")
+                break
+            elif options == 4 and hammer is True:
+                print("You smash the crate open")
+                time.sleep(2)
+                break
+            else:
+                print(f"Incorrect input. Please choose {decisions}.")
+                continue
+        except ValueError:
+            print(f"Incorrect input. Please choose {decisions}.")
+            continue
 
 
 def dining_hall():
