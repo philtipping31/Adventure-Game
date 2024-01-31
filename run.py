@@ -131,7 +131,7 @@ def kitchen():
     """
     if hammer is True:
         print("You've already collected the item from this room\n")
-        print("Go back to hallway and choose a different door")
+        print("Go back to hallway and choose a different door\n")
         hallway()
     else:
         kitchen_continue()
@@ -170,8 +170,8 @@ def kitchen_continue():
             hammer = True
             time.sleep(1)
             print("You wisely decide to ignore temptation and"
-                  " leave the shiny box")
-            print("You go back to the hallway to choose another door")
+                  " leave the shiny box\n")
+            print("You go back to the hallway to choose another door\n")
             hallway()
             break
         elif option == "b":
@@ -198,7 +198,7 @@ def ballroom():
     """
     if key is True:
         print("You've already collected the item from this room\n")
-        print("Go back to hallway and choose a different door")
+        print("Go back to hallway and choose a different door\n")
         hallway()
     else:
         print("You have entered the mansions Ballroom...\n")
@@ -212,9 +212,9 @@ def ballroom():
         print("You stretch your arms out to see if you can feel anything.\n")
         time.sleep(1)
         print("You get on your hands and knees and begin searching for "
-              "anything of use")
+              "anything of use\n")
         time.sleep(1)
-        print("However, you have a decision to make...")
+        print("However, you have a decision to make...\n")
         ballroom_continue()
         
 
@@ -322,7 +322,7 @@ def library():
     print("2. Attempt to get into the locked crate\n")
     print("3. Leave the library\n")
     if hammer is True:
-        print("4. Smash the crate with your hammer")
+        print("4. Smash the crate with your hammer\n")
     time.sleep(2)
     if hammer is True:
         decisions = "(1, 2, 3 or 4)"
@@ -336,9 +336,9 @@ def library():
                 time.sleep(2)
                 print("You go to grab the book but it acts like a lever...\n")
                 time.sleep(2)
-                print("A hidden door appears from behind the bookshelf...")
+                print("A hidden door appears from behind the bookshelf...\n")
                 time.sleep(2)
-                print("Being inquisitive you walk through the door...")
+                print("Being inquisitive you walk through the door...\n")
                 dining_hall()
             elif options == 2:
                 print("You chose option 2\n")
@@ -348,7 +348,7 @@ def library():
                 print("There's no way of getting into this.\n")
                 time.sleep(2)
                 print("Maybe you can find something in the mansion to "
-                      "help you get into this")
+                      "help you get into this\n")
                 time.sleep(2)
                 print("Annoyed, you leave the library in search of an item "
                       " to help get into the crate\n")
@@ -360,37 +360,37 @@ def library():
                 print("You have left the library and leave all "
                       " possible help behind\n")
                 time.sleep(3)
-                print("What a bad idea...")
+                print("What a bad idea...\n")
                 time.sleep(2)
-                print("You are followed out by a swarm of poisionous bats...")
+                print("You are followed out by a swarm of poisionous bats...\n")
                 time.sleep(1)
-                print("You try and run but you trip and fall...")
+                print("You try and run but you trip and fall...\n")
                 time.sleep(1)
-                print("The bats surround you and inject you with poision")
+                print("The bats surround you and inject you with poision\n")
                 time.sleep(1)
-                print("You are dead in a matter of minutes")
+                print("You are dead in a matter of minutes\n")
                 time.sleep(3)
                 print("Bad Luck\n")
                 print("You have been consumed by THE HAUNTED MANSION\n")
                 play_again()
             elif options == 4 and hammer is True:
-                print("You smash the crate open")
+                print("You smash the crate open\n")
                 time.sleep(2)
                 print("Inside you see tiny ripped up pieces of paper\n")
                 time.sleep(2)
                 print("You soon realise there are some numbers written "
-                      "on the pieces")
+                      "on the pieces\n")
                 time.sleep(1)
                 print("You match them all together and it reads:\n "
                       " ACCESS CODE: 7462")
                 print("You jump with joy thinking this could help you escape. "
                       "However, you accidentally knock over the candles and"
-                      " the paper burns to ashes...")
+                      " the paper burns to ashes...\n")
                 time.sleep(2)
-                print("Hopefully you can remember this code for later...")
+                print("Hopefully you can remember this code for later...\n")
                 time.sleep(8)
                 clear_display()
-                print("You go back to hallway to look for a way out...")
+                print("You go back to hallway to look for a way out...\n")
                 hallway()
             else:
                 print(f"Incorrect input. Please choose {decisions}.")
