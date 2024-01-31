@@ -1,4 +1,5 @@
 import time
+from os import system, name
 
 # The backpack is your inventory for collecting items in the mansion.
 backpack = []
@@ -358,6 +359,7 @@ def library():
                       " the paper burns to ashes...")
                 time.sleep(2)
                 print("Hopefully you can remember this code for later...")
+                time.sleep(8)
                 clear_display()
                 print("You go back to hallway to look for a way out...")
                 hallway()
@@ -428,7 +430,17 @@ def play_again():
             continue
 
 
-
+def clear_display():
+    """
+    Clears the console.
+    """
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+ 
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 
 intro()
