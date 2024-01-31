@@ -362,7 +362,7 @@ def library():
                 time.sleep(3)
                 print("What a bad idea...\n")
                 time.sleep(2)
-                print("You are followed out by a swarm of poisionous bats...\n")
+                print("You are followed out by a swarm of poisionous bats\n")
                 time.sleep(1)
                 print("You try and run but you trip and fall...\n")
                 time.sleep(1)
