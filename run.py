@@ -448,6 +448,11 @@ def play_again():
         play_again = input("Would you like to play again? (yes/no):\n")
         if play_again == "yes":
             backpack.clear()
+            global hammer
+            hammer = False
+            global key
+            key = False
+            clear_display()
             intro()
             break
         elif play_again == "no":
