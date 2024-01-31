@@ -215,36 +215,52 @@ def ballroom_continue():
         option = input("Do you:\na) Search Left\nb) Search Right\n"
                        "c) Search Straight Ahead\n>")
         if option == "a":
-            print("You chose to search Left")
-            print("You feel a metallic item under your hands")
-            print("It's a KEY! This could be really useful")
+            print("You chose to search Left\n")
+            time.sleep(1)
+            print("You feel a metallic item under your hands\n")
+            time.sleep(1)
+            print("It's a KEY! This could be really useful\n")
+            time.sleep(1)
             backpack.append("Key")
             print("Backpack:")
             print(backpack)
             global key
             key = True
-            print("You search for the door to try the key")
-            print("You somehowe locate the door and try the key")
-            print("IT WORKS!")
-            print("You escaped the ballroom and the hidden beast inside")
+            print("You search for the door to try the key\n")
+            time.sleep(1)
+            print("You somehowe locate the door and try the key\n")
+            time.sleep(1)
+            print("IT WORKS!\n")
+            time.sleep(1)
+            print("You escaped the ballroom and the hidden beast inside\n")
+            time.sleep(2)
             hallway()
         elif option == "b":
-            print("You chose to search Right")
+            print("You chose to search Right\n")
+            time.sleep(1)
             print("You aimless search around the floor and try "
-                  "to find something to help")
+                  "to find something to help\n")
             time.sleep(2)
-            print("You find nothing but cobwebs")
-            print("Go back and choose a different direction")
+            print("You find nothing but cobwebs\n")
+            time.sleep(1)
+            print("Go back and choose a different direction\n")
+            time.sleep(1)
             ballroom_continue()
         elif option == "c":
-            print("You chose to search straight ahead")
+            print("You chose to search straight ahead\n")
+            time.sleep(1)
             print("You suddenly see a pair of white eyes, staring "
-                  "straight at you..")
-            print("You turn and run for in the direction of the door")
-            print("The beast is two quick and grabs you")
-            print("You have been eaten alive")
+                  "straight at you..\n")
+            time.sleep(1)
+            print("You turn and run for in the direction of the door\n")
+            time.sleep(1)
+            print("The beast is two quick and grabs you\n")
+            time.sleep(1)
+            print("You have been eaten alive\n")
+            time.sleep(1)
             print("Bad luck\n")
-            print("You have been consumed by THE HAUNTED MANSION")
+            print("You have been consumed by THE HAUNTED MANSION\n")
+            time.sleep(2)
             play_again()
         else:
             print("Invalid input, please choose: a, b or c")
@@ -259,6 +275,7 @@ def library():
     print("You have entered the mansions Library\n")
     time.sleep(1)
     print("You search the room for clues or something useful\n")
+
 
 
 def dining_hall():
