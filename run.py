@@ -3,6 +3,13 @@ import time
 # The backpack is your inventory for collecting items in the mansion.
 backpack = []
 
+# Global Variables
+
+global hammer
+hammer = False
+global key
+key = False
+
 
 def intro():
     """
@@ -116,8 +123,25 @@ def hallway():
 def kitchen():
     """
     Called when user selects option 1 - Kitchen.
-    Displays new room info text and options a and b for user to select.
-    If incorrect input, user will be notified and given choice again.
+    If user has been here before and collected the item they 
+    will be taken back to the hallway.
+    If the user has not entered kitchen_continue will be called.
+    """
+    if hammer is True:
+        print("You've already collected the item from this room\n")
+        print("Go back to hallway and choose a different door")
+        hallway()
+    else:
+        kitchen_continue()
+
+
+def kitchen_continue():
+    """
+    Continues from the kitchen function if user has not entered
+    this room before.
+    Proivdes user with options a and b to choose from.
+    If a or b are not entered, invalid error appears and choices
+    are given again.
     """
     time.sleep(2)
     print("You have entered the mansions kitchen...\n")
@@ -137,6 +161,8 @@ def kitchen():
             backpack.append("Hammer")
             print("Backpack:")
             print(backpack)
+            global hammer
+            hammer = True
             time.sleep(1)
             print("You wisely decide to ignore temptation and"
                   " leave the shiny box")
@@ -159,34 +185,67 @@ def kitchen():
 def ballroom():
     """
     Called when user selects option 2 - Ballroom.
-    If incorrect input, user will be notified and given choice again.
+    Sets the scene for the ball room the calls the
+    ballroom_continue function.
     """
-    print("You have entered the mansions Ballroom...\n")
-    time.sleep(1)
-    print("As you step into the ballroom you take a moment to think...\n")
-    time.sleep(1)
-    print("The room is huge and has no light...\n")
-    time.sleep(1)
-    print("You can't see a thing\n")
-    time.sleep(1)
-    print("You stretch your arms out to see if you can feel anything.\n")
-    time.sleep(1)
-    print("You get on your hands and knees and begin searching for "
-          "anything of use")
-    time.sleep(1)
-    print("However, you have a decision to make...")
+    if key is True:
+        print("You've already collected the item from this room\n")
+        print("Go back to hallway and choose a different door")
+        hallway()
+    else:
+        print("You have entered the mansions Ballroom...\n")
+        time.sleep(1)
+        print("As you step into the ballroom you take a moment to think...\n")
+        time.sleep(1)
+        print("The room is huge and has no light...\n")
+        time.sleep(1)
+        print("You can't see a thing\n")
+        time.sleep(1)
+        print("You stretch your arms out to see if you can feel anything.\n")
+        time.sleep(1)
+        print("You get on your hands and knees and begin searching for "
+              "anything of use")
+        time.sleep(1)
+        print("However, you have a decision to make...")
+        ballroom_continue()
+        
+
+def ballroom_continue():
     while True:
         option = input("Do you:\na) Search Left\nb) Search Right\n"
                        "c) Search Straight Ahead\n>")
         if option == "a":
             print("You chose to search Left")
-            break
+            print("You feel a metallic item under your hands")
+            print("It's a KEY! This could be really useful")
+            backpack.append("Key")
+            print("Backpack:")
+            print(backpack)
+            global key
+            key = True
+            print("You search for the door to try the key")
+            print("You somehowe locate the door and try the key")
+            print("IT WORKS!")
+            print("You escaped the ballroom and the hidden beast inside")
+            hallway()
         elif option == "b":
             print("You chose to search Right")
-            break
+            print("You aimless search around the floor and try "
+                  "to find something to help")
+            time.sleep(2)
+            print("You find nothing but cobwebs")
+            print("Go back and choose a different direction")
+            ballroom_continue()
         elif option == "c":
             print("You chose to search straight ahead")
-            break
+            print("You suddenly see a pair of white eyes, staring "
+                  "straight at you..")
+            print("You turn and run for in the direction of the door")
+            print("The beast is two quick and grabs you")
+            print("You have been eaten alive")
+            print("Bad luck\n")
+            print("You have been consumed by THE HAUNTED MANSION")
+            play_again()
         else:
             print("Invalid input, please choose: a, b or c")
             continue
@@ -197,7 +256,9 @@ def library():
     Called when user selects option 3 - Library.
     If incorrect input, user will be notified and given choice again.
     """
-    print("You have entered the mansions Library")
+    print("You have entered the mansions Library\n")
+    time.sleep(1)
+    print("You search the room for clues or something useful\n")
 
 
 def dining_hall():
