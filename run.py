@@ -72,8 +72,8 @@ def hallway():
     """
     Tells the user after clicking 'Yes' that they are in the hallway
     of the mansion.
-    Provides input options to the user to choose from to progress
-    through the mansion.
+    Provides input options for room to the user to choose from
+    to progress through the mansion.
     If incorrect option is chosen options display again.
     """
     print("\nYou are standing in the main hallway...\n")
@@ -141,6 +141,9 @@ def kitchen_continue():
     Continues from the kitchen function if user has not entered
     this room before.
     Proivdes user with options a and b to choose from.
+    Option a adds hammer to users back pack and they will then go 
+    back to the hallway.
+    Option b results in game over and play_again function is called.
     If a or b are not entered, invalid error appears and choices
     are given again.
     """
@@ -187,7 +190,10 @@ def ballroom():
     """
     Called when user selects option 2 - Ballroom.
     Sets the scene for the ball room the calls the
-    ballroom_continue function.
+    ballroom_continue function if key is not in their backpack.
+    If the key is true (in backpack) the user will be told they
+    have already visited this room and take them back to the hallway
+    calling the hallway function.
     """
     if key is True:
         print("You've already collected the item from this room\n")
@@ -212,6 +218,20 @@ def ballroom():
         
 
 def ballroom_continue():
+    """
+    Function is called if user enters the ballroom and
+    does not have the key in their backpack.
+    User will be given options on what direction they wish
+    to take in search for an item.
+    Option a grants the user a key which will allow them
+    to escape from the ballroom unharmed.
+    Option b is a dead end and calls ballroom_continue
+    again to allow a second choice of direction.
+    Option c results in game over and play_again function
+    is called.
+    If any other character is entered, invalid input is shown
+    and input options are asked again.
+    """
     while True:
         option = input("Do you:\na) Search Left\nb) Search Right\n"
                        "c) Search Straight Ahead\n>")
@@ -271,6 +291,14 @@ def ballroom_continue():
 def library():
     """
     Called when user selects option 3 - Library.
+    User will be given 3 choices to progress with.
+    Function will check if user has a hammer and add a 4th option.
+    Decision options will then populate for user to choose from.
+    Option 1 will end in calling the dining_room function.
+    Option 2 will tell the user they need to locate an item to 
+    progress and call the hallway function.
+    Option 3 will result in failing the game and call the play_again
+    function.
     If incorrect input, user will be notified and given choice again.
     """
     print("You have entered the mansions Library\n")
