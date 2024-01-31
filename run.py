@@ -159,16 +159,42 @@ def kitchen():
 def ballroom():
     """
     Called when user selects option 2 - Ballroom.
-    Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
-    print("You have entered the mansions Ballroom")
+    print("You have entered the mansions Ballroom...\n")
+    time.sleep(1)
+    print("As you step into the ballroom you take a moment to think...\n")
+    time.sleep(1)
+    print("The room is huge and has no light...\n")
+    time.sleep(1)
+    print("You can't see a thing\n")
+    time.sleep(1)
+    print("You stretch your arms out to see if you can feel anything.\n")
+    time.sleep(1)
+    print("You get on your hands and knees and begin searching for "
+          "anything of use")
+    time.sleep(1)
+    print("However, you have a decision to make...")
+    while True:
+        option = input("Do you:\na) Search Left\nb) Search Right\n"
+                       "c) Search Straight Ahead\n>")
+        if option == "a":
+            print("You chose to search Left")
+            break
+        elif option == "b":
+            print("You chose to search Right")
+            break
+        elif option == "c":
+            print("You chose to search straight ahead")
+            break
+        else:
+            print("Invalid input, please choose: a, b or c")
+            continue
 
 
 def library():
     """
     Called when user selects option 3 - Library.
-    Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
     print("You have entered the mansions Library")
@@ -177,7 +203,6 @@ def library():
 def dining_hall():
     """
     Called when user selects option 4 - Dining Hall.
-    Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
     print("You have entered the mansions Dining Hall")
@@ -186,7 +211,6 @@ def dining_hall():
 def office():
     """
     Called when user selects option 5 - Office.
-    Displays new room info text and options a and b for user to select.
     If incorrect input, user will be notified and given choice again.
     """
     print("You have entered the mansions office")
@@ -195,8 +219,8 @@ def office():
 def stairs():
     """
     Called when user selects option 6 - Staircase.
-    Displays new room info text and options a and b for user to select.
-    If incorrect input, user will be notified and given choice again.
+    This ends the game and is not an interactive room.
+    play_again function will be called for the user try again.
     """
     print("You decided to take the stairs\n")
     print("You've left all rooms unsearched...\n")
