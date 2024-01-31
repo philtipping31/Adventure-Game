@@ -153,7 +153,7 @@ def kitchen_continue():
     time.sleep(1)
     while True:
         option = input("Do you:\n a) Open the cupboard door \n"
-                       " b) Pick up the shiny box\n>")
+                       " b) Pick up the shiny box\n> ")
         if option == "a":
             print("You chose to open the cupboard, inside you find a"
                   " hammer. Put this in your backpack as it may come "
@@ -274,7 +274,11 @@ def library():
     """
     print("You have entered the mansions Library\n")
     time.sleep(1)
+    print("Luckily, vision is clear in this room as it's "
+          " illuminated by candle light\n")
+    time.sleep(2)
     print("You search the room for clues or something useful\n")
+    time.sleep(2)
     print("The room is full of books but you notice a particular "
           " book that sticks out from the rest\n")
     time.sleep(1)
@@ -296,20 +300,67 @@ def library():
         decisions = "(1, 2 or 3)"
     while True:
         try:
-            options = int(input(f"Which do you choose? {decisions}:"))
+            options = int(input(f"Which do you choose? {decisions}:\n> "))
             if options == 1:
-                print("You chose option 1")
-                break
+                print("You chose option 1...\n")
+                time.sleep(2)
+                print("You go to grab the book but it acts like a lever...\n")
+                time.sleep(2)
+                print("A hidden door appears from behind the bookshelf...")
+                time.sleep(2)
+                print("Being inquisitive you walk through the door...")
+                dining_hall()
             elif options == 2:
-                print("You chose option 2")
-                break
+                print("You chose option 2\n")
+                time.sleep(2)
+                print("The crate is tough and made of solid wood\n")
+                time.sleep(2)
+                print("There's no way of getting into this.\n")
+                time.sleep(2)
+                print("Maybe you can find something in the mansion to "
+                      "help you get into this")
+                time.sleep(2)
+                print("Annoyed, you leave the library in search of an item "
+                      " to help get into the crate\n")
+                time.sleep(2)
+                hallway()
             elif options == 3:
-                print("You chose option 3")
-                break
+                print("You chose option 3\n")
+                tim.sleep(2)
+                print("You have left the library and leave all "
+                      " possible help behind\n")
+                time.sleep(3)
+                print("What a bad idea...")
+                time.sleep(2)
+                print("You are followed out by a swarm of poisionous bats...")
+                time.sleep(1)
+                print("You try and run but you trip and fall...")
+                time.sleep(1)
+                print("The bats surround you and inject you with poision")
+                time.sleep(1)
+                print("You are dead in a matter of minutes")
+                time.sleep(3)
+                print("Bad Luck\n")
+                print("You have been consumed by THE HAUNTED MANSION\n")
+                play_again()
             elif options == 4 and hammer is True:
                 print("You smash the crate open")
                 time.sleep(2)
-                break
+                print("Inside you see tiny ripped up pieces of paper\n")
+                time.sleep(2)
+                print("You soon realise there are some numbers written "
+                      "on the pieces")
+                time.sleep(1)
+                print("You match them all together and it reads:\n "
+                      " ACCESS CODE: 7462")
+                print("You jump with joy thinking this could help you escape. "
+                      "However, you accidentally knock over the candles and"
+                      " the paper burns to ashes...")
+                time.sleep(2)
+                print("Hopefully you can remember this code for later...")
+                clear_display()
+                print("You go back to hallway to look for a way out...")
+                hallway()
             else:
                 print(f"Incorrect input. Please choose {decisions}.")
                 continue
@@ -375,6 +426,9 @@ def play_again():
         else:
             print("Invalid input. Please type 'yes' or 'no'.")
             continue
+
+
+
 
 
 intro()
