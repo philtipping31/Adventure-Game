@@ -40,7 +40,7 @@ def intro():
     time.sleep(2)
     print("You have entered...\n")
     time.sleep(3)
-    print("         /\\    /\\")
+    print("         /\\     /\\")
     print("     ____||_____||____")
     print("    /                 \\")
     print("   /                   \\")
@@ -183,6 +183,15 @@ def kitchen_continue():
             print("You chose to open the cupboard, inside you find a"
                   " hammer. Put this in your backpack as it may come "
                   "in useful later\n")
+            time.sleep(1)
+            print("""
+            ┌──────┐
+            │      │
+            │      ├────────┬─┬──┬─┐
+            │      ├────────┘─┘──┘─┘
+            │      │
+            └──────┘        
+            """)
             backpack.append("Hammer")
             print("Backpack:")
             print(backpack)
@@ -262,6 +271,13 @@ def ballroom_continue():
             print("You feel a metallic item under your hands\n")
             time.sleep(1)
             print("It's a KEY! This could be really useful\n")
+            print("""
+            ┌──────┐
+            │|----|│
+            │|    |├────────┬─┬──┬─┐
+            │|----|│        │ ├──┤ │
+            └──────┘        └─┘  └─┘
+                  """)
             time.sleep(1)
             backpack.append("Key")
             print("Backpack:")
@@ -543,11 +559,14 @@ def dining_hall_continue():
             print("You go back to the hallway in search for the safe with "
                   "the spare key")
             hallway()
-        else:
+        if choice == "b":
             print("You leave them behind. You can always come back for"
                   " these\n")
             print("You head back to the hallway")
             hallway()
+        else:
+            print("Invalid input. Please type 'a' or 'b'")
+            continue
 
 
 def office():
@@ -556,6 +575,7 @@ def office():
     If incorrect input, user will be notified and given choice again.
     """
     print("You have entered the mansions office")
+
 
 
 def stairs():
