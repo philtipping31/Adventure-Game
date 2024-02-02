@@ -12,6 +12,8 @@ global key
 key = False
 global blueprints
 blueprints = False
+global code
+code = False
 
 # note details found in dining hall
 
@@ -192,13 +194,14 @@ def kitchen_continue():
             │      │
             └──────┘        
             """)
+            time.sleep(2)
             backpack.append("Hammer")
             print("Backpack:")
             print(backpack)
             global hammer
             hammer = True
             time.sleep(1)
-            print("You wisely decide to ignore temptation and"
+            print("\nYou wisely decide to ignore temptation and"
                   " leave the shiny box\n")
             print("You go back to the hallway to choose another door\n")
             hallway()
@@ -264,7 +267,7 @@ def ballroom_continue():
     """
     while True:
         option = input("Do you:\na) Search Left\nb) Search Right\n"
-                       "c) Search Straight Ahead\n>")
+                       "c) Search Straight Ahead\n> ")
         if option == "a":
             print("You chose to search Left\n")
             time.sleep(1)
@@ -339,24 +342,27 @@ def library():
     If incorrect input, user will be notified and given choice again.
     """
     print("You have entered the mansions Library\n")
-    time.sleep(1)
+    time.sleep(2)
     print("Luckily, vision is clear in this room as it's "
           " illuminated by candle light\n")
     time.sleep(2)
     print("You search the room for clues or something useful\n")
     time.sleep(2)
     print("The room is full of books but you notice a particular "
-          " book that sticks out from the rest\n")
-    time.sleep(1)
+          "book that sticks out from the rest\n")
+    time.sleep(2)
     print("There is also a locked crate on a table in the "
           "center of the room\n")
-    time.sleep(1)
+    time.sleep(2)
     print("Do you investigate or leave the library?\n")
     print("You wait a few seconds to think...\n")
     time.sleep(2)
     print("1. Pick the book up from the bookshelf\n")
+    time.sleep(1)
     print("2. Attempt to get into the locked crate\n")
+    time.sleep(1)
     print("3. Leave the library\n")
+    time.sleep(1)
     if hammer is True:
         print("4. Smash the crate with your hammer\n")
     time.sleep(2)
@@ -416,9 +422,12 @@ def library():
                 time.sleep(2)
                 print("You soon realise there are some numbers written "
                       "on the pieces\n")
-                time.sleep(1)
+                time.sleep(2)
                 print("You match them all together and it reads:\n "
-                      " ACCESS CODE: 7462")
+                      " ACCESS CODE: 7462\n")
+                global code
+                code = True
+                time.sleep(2)
                 print("You jump with joy thinking this could help you escape. "
                       "However, you accidentally knock over the candles and"
                       " the paper burns to ashes...\n")
@@ -576,9 +585,106 @@ def office():
     Called when user selects option 5 - Office.
     If incorrect input, user will be notified and given choice again.
     """
-    print("You have entered the mansions office")
+    print("You have entered the mansions office\n")
     time.sleep(1)
-
+    print("You scan the room to look for something useful\n")
+    time.sleep(2)
+    print("You search for items on the desk but nothing seems to be "
+          "of any use\n")
+    time.sleep(2)
+    print("You sit in the chair and look around again\n")
+    time.sleep(2)
+    print("There's a strange hatch on the wall!\n")
+    time.sleep(1)
+    print("Do you...\n")
+    print("a) Ignore it and leave the office.\n")
+    print("b) Open the hatch\n")
+    while True:
+        decision = input("Please type 'a' or 'b':\n> ")
+        if decision == "a":
+            print("You leave the office and ignore temptation")
+            time.sleep(2)
+            hallway()
+        elif decision == "b":
+            print("You open the hatch and see a safe!")
+            time.sleep(2)
+            break
+        else:
+            print("Incorrect input. Please type 'a' or 'b'")
+            continue
+        
+    print("You have another decision to make...\n")
+    time.sleep(2)
+    print("Do you...\n")
+    time.sleep(2)
+    print("1. Do nothing, you don't know the code to get in!\n")
+    time.sleep(1)
+    print("2. Have a guess and see if you can guess the code.\n")
+    time.sleep(1)
+    if code is True:
+        print("3. Remember the code from earlier and type this in!\n")
+    time.sleep(2)
+    if code is True:
+        option = "(1, 2 or 3)"
+    else:
+        option = "(1 or 2)"
+    while True:
+        try:
+            options = int(input(f"Which do you choose? {option}:\n> "))
+            if options == 1:
+                print("You chose option 1...\n")
+                time.sleep(2)
+                print("How could you possibly guess this code...\n")
+                time.sleep(2)
+                print("You leave the office in search for a code for "
+                      "the safe\n")
+                time.sleep(2)
+                hallway()
+            elif options == 2:
+                print("You chose option 2\n")
+                time.sleep(2)
+                print("Gambling your fate you enter some numbers in\n")
+                time.sleep(2)
+                numbers = input("Type your access code here: ")
+                time.sleep(2)
+                print("ACCESS DENIED\n")
+                time.sleep(2)
+                print("The floor beneath you disappears in a flash\n")
+                time.sleep(2)
+                print("You have fallen to your death.\n")
+                time.sleep(3)
+                print("Bad Luck\n")
+                print("You have been consumed by THE HAUNTED MANSION\n")
+                play_again()
+            elif options == 3 and code is True:
+                print("Do you remember the code from the ripped up pieces"
+                      " of paper in the Library\n")
+                time.sleep(2)
+                print("You carefully type them in...\n")
+                time.sleep(2)
+                correct_code = input("Type in your code:\n> ")
+                if correct_code == "7462":
+                    print("You remembered it correctly!!\n")
+                    time.sleep(2)
+                    print("ACCESS GRANTED\n")
+                    time.sleep(1)
+                    print("The safe opens and there you see...\n")
+                    time.sleep(1)
+                    print("The spare key!\n")
+                    time.sleep(1)
+                    print("You grab the key and run to the front door!\n")
+                    time.sleep(1)
+                    print("IT WORKS!\n")
+                    game_win()
+                else:
+                    print("code incorrect, please try again.")
+                    continue  
+            else:
+                print(f"Incorrect input. Please choose {options}.")
+                continue
+        except ValueError:
+            print(f"Incorrect input. Please choose {options}.")
+            continue
 
 
 def stairs():
@@ -597,7 +703,7 @@ def stairs():
     print("The staircase is old and brittle and a snaps underneath you\n")
     time.sleep(2)
     print("You are caught by the ghostly figure chasing you and fall to "
-          "a painful death")
+          "a painful death\n")
     time.sleep(2)
     print("Bad luck.\n"
           "You have been consumed by THE HAUNTED MANSION!\n")
@@ -621,6 +727,8 @@ def play_again():
             key = False
             global blueprints
             blueprints = False
+            global code
+            code = False
             clear_display()
             intro()
             break
@@ -632,9 +740,21 @@ def play_again():
             continue
 
 
+def game_win():
+    """
+    Called if the player enters the correct code into the safe.
+    Player escapes The Haunted Mansion!
+    Play again will be called at the end of function to allow
+    user the choice to play again.
+    """
+    print("Congratulations! You escaped the Haunted Mansion")
+    end_game()
+
+
 def end_game():
     """
     Called when player does not want to play the game again.
+    clears the display but still gives user option to play again.
     """
     clear_display()
 
