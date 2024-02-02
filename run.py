@@ -10,6 +10,17 @@ global hammer
 hammer = False
 global key
 key = False
+global blueprints
+blueprints = False
+
+# note details found in dining hall
+
+note = {
+        "home": "The Haunted Mansion",
+        "owner_name": "Dr S Cary",
+        "spare_key": "Safe",
+        "mansion_blueprints": "Enclosed"
+    }
 
 
 def intro():
@@ -388,9 +399,10 @@ def library():
                       " the paper burns to ashes...\n")
                 time.sleep(2)
                 print("Hopefully you can remember this code for later...\n")
-                time.sleep(8)
+                time.sleep(5)
                 clear_display()
-                print("You go back to hallway to look for a way out...\n")
+                print("You go back to hallway to look for a possible "
+                      "way out...\n")
                 hallway()
             else:
                 print(f"Incorrect input. Please choose {decisions}.")
@@ -403,9 +415,120 @@ def library():
 def dining_hall():
     """
     Called when user selects option 4 - Dining Hall.
-    If incorrect input, user will be notified and given choice again.
+    If user has already collected the items from this room, the user
+    will be sent back to the hallway.
+    If user has not entered the room, note and floorplan will display
+    and append the backpack and be set as true in global scope.
+    User will not lose the game in this room and will be sent back
+    to the hallway to continue their search.
     """
-    print("You have entered the mansions Dining Hall")
+    if blueprints is True:
+        print("You have already collected the items from this room\n")
+        print("Go back to the hallway and choose a different room\n")
+        hallway()
+    else:
+        dining_hall_continue()
+    
+
+def dining_hall_continue():
+    print("You have entered the mansions Dining Hall\n")
+    time.sleep(2)
+    print("The dining hall is illuminated by a candle stick "
+          "in the center of the table.\n")
+    time.sleep(2)
+    print("You see a folder named 'Owners Manual'.\n")
+    time.sleep(2)
+    print("You open the folder, but the pages are old and worn\n")
+    time.sleep(2)
+    print("One loose page falls out, you bend down and pick it up\n")
+    time.sleep(2)
+    print("The page is ripped and the words are faded, but you"
+          " manage to work out what they read\n")
+    time.sleep(2)
+    print("")
+    building = note["home"]
+    print(building)
+    name = note["owner_name"]
+    print(name)
+    location = note["spare_key"]
+    print(location)
+    floorplan = note["mansion_blueprints"]
+    print(floorplan)
+    time.sleep(1)
+    print("\n")
+    time.sleep(3)
+    print("What does this mean?...\n")
+    time.sleep(2)
+    print("There seems to be something missing here...\n")
+    time.sleep(2)
+    print("You search the folder and find another ripped page\n")
+    time.sleep(1)
+    print("It reads:\n")
+    for key in note:
+        print(key)
+    print("")
+    print("You line the two pieces of paper together and it reads...\n")
+    time.sleep(2)
+    print("Home: The Haunted Mansion")
+    print("Owner: Dr S Cary")
+    print("Spare Key: Safe")
+    print("Mansion Blueprints: Enclosed")
+    time.sleep(2)
+    print("")
+    print("This is really helpful...\n")
+    print("You search the papers on the floor for the blueprints\n")
+    time.sleep(3)
+    print("You find them! But only for the ground floor...\n")
+    print(" -------------------------------------------------- ")
+    print("|                                                  |")
+    print("|                    Ballroom                      |")
+    print("|                                                  |")
+    print("|                                                  |")
+    print("|                                                  |")
+    print("|                                                  |")
+    print("|----------------------    ------------------------|")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|                 |    |  |   |                    |")
+    print("|     Office      |    |  |   |       Library      |")
+    print("|                /      S     |                    |")
+    print("|                 |     T      \\                  |")
+    print("|                 |     A     |                    |")
+    print("|                 |     I     |                    |")
+    print("|                 |     R     |                    |")
+    print("|-----------------|     S     |--------------------|")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|     Kitchen    /             \\     Dining Hall  |")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|                 |           |                    |")
+    print("|----------------------    ------------------------| ")
+    print("")
+    while True:
+        choice = input("Do you:\na) Take the letter and blueprints\n"
+                       "b) Decide they are of no use and leave them"
+                       " behind.\n> ")
+        if choice == "a":
+            backpack.append("Mansion Details")
+            print("Backpack:")
+            print(backpack)
+            global blueprints
+            blueprints = True
+            print("")
+            print("You go back to the hallway in search for the safe with "
+                  "the spare key")
+            hallway()
+        else:
+            print("You leave them behind. You can always come back for"
+                  " these\n")
+            print("You head back to the hallway")
+            hallway()
 
 
 def office():
@@ -453,6 +576,8 @@ def play_again():
             hammer = False
             global key
             key = False
+            global blueprints
+            blueprints = False
             clear_display()
             intro()
             break
@@ -472,7 +597,7 @@ def clear_display():
     if name == 'nt':
         _ = system('cls')
  
-    # for mac and linux(here, os.name is 'posix')
+    # for mac and linux
     else:
         _ = system('clear')
 
