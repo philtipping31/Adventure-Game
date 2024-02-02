@@ -464,6 +464,7 @@ def dining_hall_continue():
     back to the hallway.
     User will not lose the game in this room and will be sent back
     to the hallway to continue their search either way.
+    If incorrect input, user will be asked question again.
     """
 
     print("You have entered the mansions Dining Hall\n")
@@ -497,7 +498,7 @@ def dining_hall_continue():
     print("There seems to be something missing here...\n")
     time.sleep(2)
     print("You search the folder and find another ripped page\n")
-    time.sleep(1)
+    time.sleep(2)
     print("It reads:\n")
     for key in note:
         print(key)
@@ -508,9 +509,10 @@ def dining_hall_continue():
     print("Owner: Dr S Cary")
     print("Spare Key: Safe")
     print("Mansion Blueprints: Enclosed")
-    time.sleep(2)
+    time.sleep(3)
     print("")
-    print("This is really helpful...\n")
+    print("This could be really helpful...\n")
+    time.slep(2)
     print("You search the papers on the floor for the blueprints\n")
     time.sleep(3)
     print("You find them! But only for the ground floor...\n")
@@ -527,7 +529,7 @@ def dining_hall_continue():
     print("|                 |    |  |   |                    |")
     print("|     Office      |    |  |   |       Library      |")
     print("|                /      S     |                    |")
-    print("|                 |     T      \\                  |")
+    print("|                 |     T      \\                   |")
     print("|                 |     A     |                    |")
     print("|                 |     I     |                    |")
     print("|                 |     R     |                    |")
@@ -535,7 +537,7 @@ def dining_hall_continue():
     print("|                 |           |                    |")
     print("|                 |           |                    |")
     print("|                 |           |                    |")
-    print("|     Kitchen    /             \\     Dining Hall  |")
+    print("|     Kitchen    /             \\    Dining Hall    |")
     print("|                 |           |                    |")
     print("|                 |           |                    |")
     print("|                 |           |                    |")
@@ -565,7 +567,7 @@ def dining_hall_continue():
             print("You head back to the hallway")
             hallway()
         else:
-            print("Invalid input. Please type 'a' or 'b'")
+            print("Incorrect input. Please type 'a' or 'b'")
             continue
 
 
@@ -575,6 +577,7 @@ def office():
     If incorrect input, user will be notified and given choice again.
     """
     print("You have entered the mansions office")
+    time.sleep(1)
 
 
 
@@ -585,16 +588,17 @@ def stairs():
     play_again function will be called for the user try again.
     """
     print("You decided to take the stairs\n")
+    time.sleep(1)
     print("You've left all rooms unsearched...\n")
-    time.sleep(1)
+    time.sleep(2)
     print("You hear heavy breathing and footsteps...\n")
-    time.sleep(1)
+    time.sleep(2)
     print("In a panic you sprint up the stairs...\n")
     print("The staircase is old and brittle and a snaps underneath you\n")
-    time.sleep(1)
+    time.sleep(2)
     print("You are caught by the ghostly figure chasing you and fall to "
           "a painful death")
-    time.sleep(1)
+    time.sleep(2)
     print("Bad luck.\n"
           "You have been consumed by THE HAUNTED MANSION!\n")
     play_again()
@@ -608,7 +612,7 @@ def play_again():
     If not, game ends. If Yes, intro function is called again.
     """
     while True:
-        play_again = input("Would you like to play again? (yes/no):\n")
+        play_again = input("Would you like to play again? (yes/no):\n> ")
         if play_again == "yes":
             backpack.clear()
             global hammer
@@ -622,10 +626,17 @@ def play_again():
             break
         elif play_again == "no":
             print("\nNever mind... Thanks for playing and come back soon!\n")
-            break
+            end_game()
         else:
             print("Invalid input. Please type 'yes' or 'no'.")
             continue
+
+
+def end_game():
+    """
+    Called when player does not want to play the game again.
+    """
+    clear_display()
 
 
 def clear_display():
