@@ -27,10 +27,23 @@ def intro():
     """
     Displays the game intro and sets the scene.
     """
+
+    print("It's a dark and cold night, you are lost and alone scared...\n")
+    time.sleep(1)
+    print("You feel as if you are being watched...\n")
+    time.sleep(1)
+    print("You turn and run...\n")
+    time.sleep(1)
+    print("You're being chased through the spooky forest...\n")
+    time.sleep(1)
+    print("You see a door ahead, you run in to hide...\n")
+    time.sleep(2)
+    print("You have entered...\n")
+    time.sleep(3)
     print("         /\\    /\\")
-    print("     ___| |____| |____")
+    print("     ____||_____||____")
     print("    /                 \\")
-    print("   /     Welcome to    \\")
+    print("   /                   \\")
     print("  /_____________________\\")
     print("  | The Haunted Mansion!|")
     print("  |                     |")
@@ -39,15 +52,11 @@ def intro():
     print("__|____|____|___________|______/ \\")
     print("")
     time.sleep(1)
-    print("Welcome to the Haunted Mansion\n")
-    time.sleep(1)
-    print("It's a dark and cold night, you are alone and scared...\n")
-    time.sleep(1)
     print("You look around and realise...\n")
     time.sleep(2)
     print("YOU ARE LOCKED IN!!!\n")
     time.sleep(1)
-    print("Your mission is to escape or accept your fate.\n")
+    print("Your mission is to escape the mansion or accept your fate.\n")
     time.sleep(2)
     start_game()
 
@@ -417,10 +426,7 @@ def dining_hall():
     Called when user selects option 4 - Dining Hall.
     If user has already collected the items from this room, the user
     will be sent back to the hallway.
-    If user has not entered the room, note and floorplan will display
-    and append the backpack and be set as true in global scope.
-    User will not lose the game in this room and will be sent back
-    to the hallway to continue their search.
+    If user has not entered the room, dining_hall_continue is called.
     """
     if blueprints is True:
         print("You have already collected the items from this room\n")
@@ -428,9 +434,22 @@ def dining_hall():
         hallway()
     else:
         dining_hall_continue()
-    
+   
 
 def dining_hall_continue():
+    """
+    Called if user has not entered the dining hall
+    and collected the item.
+    In this room the note and floorplan will display
+    user will be given a choice to take items or leave them.
+    If they choose 'a' to take the items then this will append
+    the details to the backpack and be set as true in global scope.
+    If they choose 'b' this will leave the items and take the user
+    back to the hallway.
+    User will not lose the game in this room and will be sent back
+    to the hallway to continue their search either way.
+    """
+
     print("You have entered the mansions Dining Hall\n")
     time.sleep(2)
     print("The dining hall is illuminated by a candle stick "
