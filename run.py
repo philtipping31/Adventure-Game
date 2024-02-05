@@ -113,8 +113,8 @@ def hallway():
     print("")
     time.sleep(1)
     while True:
-        chooseRoute = input("What route do you choose?\n" 
-                            "Please type a number between 1 to 6\n> ")
+        chooseRoute = input("What route do you choose?\n"
+                            "\nPlease type a number between 1 to 6\n> ")
         if chooseRoute == "1":
             print("\nYou chose option 1 - Kitchen\n")
             kitchen()
@@ -153,7 +153,7 @@ def kitchen():
     """
     if hammer is True:
         print("You've already collected the item from this room\n")
-        time.slep(2)
+        time.sleep(2)
         print("Go back to hallway and choose a different door\n")
         time.sleep(2)
         hallway()
@@ -186,7 +186,7 @@ def kitchen_continue():
         if option == "a":
             print("\nYou chose to open the cupboard, inside you find a"
                   " hammer. Put this in your backpack as it may come"
-                  " in useful later\n")
+                  " in useful later.\n")
             time.sleep(1)
             print("""
             ┌──────┐
@@ -336,6 +336,24 @@ def ballroom_continue():
 def library():
     """
     Called when user selects option 3 - Library.
+    Checks if code is True. If true, tells the user
+    they have already been in this room. 
+    If they have no code, calls library_continue function.
+    """
+    if code is True:
+        print("You've already collected the item from this room\n")
+        time.sleep(2)
+        print("Go back to hallway and choose a different door\n")
+        time.sleep(2)
+        hallway()
+    else:
+        library_continue()
+
+
+def library_continue():
+    """
+    
+    and does not have the code in their backpack.
     User will be given 3 choices to progress with.
     Function will check if user has a hammer and add a 4th option.
     Decision options will then populate for user to choose from.
@@ -627,9 +645,9 @@ def office():
     print("Do you...\n")
     time.sleep(2)
     print("1. Do nothing, you don't know the code to get in!\n")
-    time.sleep(1)
+    time.sleep(2)
     print("2. Have a guess and see if you can guess the code.\n")
-    time.sleep(1)
+    time.sleep(2)
     if code is True:
         print("3. Remember the code from earlier and type this in!\n")
     time.sleep(2)
@@ -760,6 +778,7 @@ def game_win():
     """
     print("Congratulations! You escaped the Haunted Mansion\n")
     print("Thanks for playing, come back soon.")
+    time.sleep(3)
     end_game()
 
 
@@ -770,6 +789,7 @@ def end_game():
     """
     time.sleep(5)
     clear_display()
+    play_again()
 
 
 def clear_display():
