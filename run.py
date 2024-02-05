@@ -116,31 +116,31 @@ def hallway():
         chooseRoute = input("What route do you choose?\n" 
                             "Please type a number between 1 to 6\n> ")
         if chooseRoute == "1":
-            print("You chose option 1 - Kitchen\n")
+            print("\nYou chose option 1 - Kitchen\n")
             kitchen()
             break
         elif chooseRoute == "2":
-            print("You chose option 2 - Ballroom\n")
+            print("\nYou chose option 2 - Ballroom\n")
             ballroom()
             break
         elif chooseRoute == "3":
-            print("You chose option 3 - Library\n")
+            print("\nYou chose option 3 - Library\n")
             library()
             break
         elif chooseRoute == "4":
-            print("You chose option 4 - Dining Hall\n")
+            print("\nYou chose option 4 - Dining Hall\n")
             dining_hall()
             break
         elif chooseRoute == "5":
-            print("You chose option 5 - Office\n")
+            print("\nYou chose option 5 - Office\n")
             office()
             break
         elif chooseRoute == "6":
-            print("You chose option 6 - Staircase\n")
+            print("\nYou chose option 6 - Staircase\n")
             stairs()
             break
         else:
-            print("Invalid input. Please choose a number between 1 and 6")
+            print("\nInvalid input. Please choose a number between 1 and 6")
             continue
        
 
@@ -153,7 +153,9 @@ def kitchen():
     """
     if hammer is True:
         print("You've already collected the item from this room\n")
+        time.slep(2)
         print("Go back to hallway and choose a different door\n")
+        time.sleep(2)
         hallway()
     else:
         kitchen_continue()
@@ -231,7 +233,9 @@ def ballroom():
     """
     if key is True:
         print("You've already collected the item from this room\n")
+        time.sleep(2)
         print("Go back to hallway and choose a different door\n")
+        time.sleep(2)
         hallway()
     else:
         print("You have entered the mansions Ballroom...\n")
@@ -289,35 +293,35 @@ def ballroom_continue():
             global key
             key = True
             print("You search for the door to try the key\n")
-            time.sleep(1)
-            print("You somehowe locate the door and try the key\n")
-            time.sleep(1)
+            time.sleep(2)
+            print("You somehow locate the door and try the key\n")
+            time.sleep(2)
             print("IT WORKS!\n")
-            time.sleep(1)
+            time.sleep(2)
             print("You escaped the ballroom and the hidden beast inside\n")
             time.sleep(2)
             hallway()
         elif option == "b":
             print("\nYou chose to search Right\n")
-            time.sleep(1)
+            time.sleep(2)
             print("You aimlessly search around the floor and try "
                   "to find something to help\n")
             time.sleep(2)
             print("You find nothing but cobwebs\n")
-            time.sleep(1)
+            time.sleep(2)
             print("Go back and choose a different direction\n")
             time.sleep(1)
             ballroom_continue()
         elif option == "c":
             print("\nYou chose to search straight ahead\n")
-            time.sleep(1)
+            time.sleep(2)
             print("You suddenly see a pair of white eyes, staring "
                   "straight at you..\n")
-            time.sleep(1)
+            time.sleep(2)
             print("You turn and run for in the direction of the door\n")
-            time.sleep(1)
+            time.sleep(2)
             print("The beast is two quick and grabs you\n")
-            time.sleep(1)
+            time.sleep(2)
             print("You have been eaten alive\n")
             time.sleep(1)
             print("Bad luck!\n")
@@ -457,7 +461,9 @@ def dining_hall():
     """
     if blueprints is True:
         print("You have already collected the items from this room\n")
+        time.sleep(2)
         print("Go back to the hallway and choose a different room\n")
+        time.sleep(2)
         hallway()
     else:
         dining_hall_continue()
