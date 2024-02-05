@@ -142,7 +142,7 @@ def hallway():
         else:
             print("\nInvalid input. Please choose a number between 1 and 6")
             continue
-       
+
 
 def kitchen():
     """
@@ -194,8 +194,7 @@ def kitchen_continue():
             │      ├────────┬─┬──┬─┐
             │      ├────────┘─┘──┘─┘
             │      │
-            └──────┘        
-            """)
+            └──────┘""")
             time.sleep(2)
             backpack.append("Hammer")
             print("Backpack:")
@@ -253,7 +252,7 @@ def ballroom():
         time.sleep(1)
         print("However, you have a decision to make...\n")
         ballroom_continue()
-        
+
 
 def ballroom_continue():
     """
@@ -337,7 +336,7 @@ def library():
     """
     Called when user selects option 3 - Library.
     Checks if code is True. If true, tells the user
-    they have already been in this room. 
+    they have already been in this room.
     If they have no code, calls library_continue function.
     """
     if code is True:
@@ -352,13 +351,13 @@ def library():
 
 def library_continue():
     """
-    
-    and does not have the code in their backpack.
+    Called when user enters library and does not have
+    the code in their backpack.
     User will be given 3 choices to progress with.
     Function will check if user has a hammer and add a 4th option.
     Decision options will then populate for user to choose from.
     Option 1 will end in calling the dining_room function.
-    Option 2 will tell the user they need to locate an item to 
+    Option 2 will tell the user they need to locate an item to
     progress and call the hallway function.
     Option 3 will result in failing the game and call the play_again
     function.
@@ -485,7 +484,7 @@ def dining_hall():
         hallway()
     else:
         dining_hall_continue()
-   
+
 
 def dining_hall_continue():
     """
@@ -639,7 +638,6 @@ def office():
         else:
             print("\nIncorrect input. Please type 'a' or 'b'")
             continue
-        
     print("\nYou have another decision to make...\n")
     time.sleep(2)
     print("Do you...\n")
@@ -706,7 +704,7 @@ def office():
                     game_win()
                 else:
                     print("code incorrect, please try again.")
-                    continue  
+                    continue
             else:
                 print(f"Incorrect input. Please choose {options}.")
                 continue
@@ -743,7 +741,7 @@ def play_again():
     """
     Called when the player says no to playing the game
     as well as when the player wins or dies.
-    Asks user whether they would like to play again. 
+    Asks user whether they would like to play again.
     If not, game ends. If Yes, intro function is called again.
     """
     while True:
@@ -799,7 +797,7 @@ def clear_display():
     # for windows
     if name == 'nt':
         _ = system('cls')
- 
+
     # for mac and linux
     else:
         _ = system('clear')
