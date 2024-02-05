@@ -420,9 +420,9 @@ def library_continue():
                 hallway()
             elif options == 3:
                 print("\nYou chose option 3\n")
-                tim.sleep(2)
+                time.sleep(2)
                 print("You have left the library and leave all "
-                      " possible help behind\n")
+                      "possible help behind\n")
                 time.sleep(3)
                 print("What a bad idea...\n")
                 time.sleep(2)
