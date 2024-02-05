@@ -415,7 +415,7 @@ def library_continue():
                       "help you get into this\n")
                 time.sleep(2)
                 print("Annoyed, you leave the library in search of an item "
-                      " to help get into the crate\n")
+                      "to help get into the crate\n")
                 time.sleep(2)
                 hallway()
             elif options == 3:
@@ -513,7 +513,7 @@ def dining_hall_continue():
     print("One loose page falls out, you bend down and pick it up\n")
     time.sleep(2)
     print("The page is ripped and the words are faded, but you"
-          " manage to work out what they read\n")
+          " manage to work out what they read:\n")
     time.sleep(2)
     print("")
     building = note["home"]
