@@ -15,7 +15,7 @@ blueprints = False
 global code
 code = False
 
-# note details found in dining hall
+# note details found in the dining hall
 
 note = {
         "home": "The Haunted Mansion",
@@ -65,7 +65,7 @@ def intro():
 
 def start_game():
     """
-    Starts the Haunted mansion game, asking the user whether
+    Starts the Haunted Mansion game, asking the user whether
     they want to try and escape or accept their fate.
     If they do not want to escape, the game ends.
     If yes, the game continues.
@@ -94,9 +94,9 @@ def hallway():
     """
     Tells the user after clicking 'Yes' that they are in the hallway
     of the mansion.
-    Provides input options for room to the user to choose from
+    Provides input options for room for the user to choose from
     to progress through the mansion.
-    If incorrect option is chosen options display again.
+    If an incorrect option is chosen options display again.
     """
     print("\nYou are standing in the main hallway...\n")
     time.sleep(1)
@@ -142,12 +142,12 @@ def hallway():
         else:
             print("Invalid input. Please choose a number between 1 and 6")
             continue
-        
+       
 
 def kitchen():
     """
-    Called when user selects option 1 - Kitchen.
-    If user has been here before and collected the item they 
+    Called when the user selects option 1 - Kitchen.
+    If the user has been here before and collected the item they
     will be taken back to the hallway.
     If the user has not entered kitchen_continue will be called.
     """
@@ -161,10 +161,10 @@ def kitchen():
 
 def kitchen_continue():
     """
-    Continues from the kitchen function if user has not entered
+    Continues from the kitchen function if the user has not entered
     this room before.
-    Proivdes user with options a and b to choose from.
-    Option a adds hammer to users back pack and they will then go 
+    Provides user with options a and b to choose from.
+    Option a adds hammer to users backpack and they will then go
     back to the hallway.
     Option b results in game over and play_again function is called.
     If a or b are not entered, invalid error appears and choices
@@ -209,7 +209,7 @@ def kitchen_continue():
         elif option == "b":
             print("You chose to pick up the shiny box...\n"
                   " This was a hidden lever that opens a trap door,"
-                  " you fall down the trap door to your painful death\n")
+                  " you fall down the trap door to your painful death.\n")
             time.sleep(1)
             print("Bad luck.\n"
                   "You have been consumed by THE HAUNTED MANSION!\n")
@@ -221,11 +221,11 @@ def kitchen_continue():
 
 def ballroom():
     """
-    Called when user selects option 2 - Ballroom.
-    Sets the scene for the ball room the calls the
+    Called when the user selects option 2 - Ballroom.
+    Sets the scene for the ballroom then calls the
     ballroom_continue function if key is not in their backpack.
     If the key is true (in backpack) the user will be told they
-    have already visited this room and take them back to the hallway
+    have already visited this room and takes them back to the hallway
     calling the hallway function.
     """
     if key is True:
@@ -747,7 +747,8 @@ def game_win():
     Play again will be called at the end of function to allow
     user the choice to play again.
     """
-    print("Congratulations! You escaped the Haunted Mansion")
+    print("Congratulations! You escaped the Haunted Mansion\n")
+    print("Thanks for playing, come back soon.")
     end_game()
 
 
@@ -756,6 +757,7 @@ def end_game():
     Called when player does not want to play the game again.
     clears the display but still gives user option to play again.
     """
+    time.sleep(5)
     clear_display()
 
 
