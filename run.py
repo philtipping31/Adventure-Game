@@ -182,9 +182,9 @@ def kitchen_continue():
         option = input("Do you:\n a) Open the cupboard door \n"
                        " b) Pick up the shiny box\n> ")
         if option == "a":
-            print("You chose to open the cupboard, inside you find a"
-                  " hammer. Put this in your backpack as it may come "
-                  "in useful later\n")
+            print("\nYou chose to open the cupboard, inside you find a"
+                  " hammer. Put this in your backpack as it may come"
+                  " in useful later\n")
             time.sleep(1)
             print("""
             ┌──────┐
@@ -207,12 +207,13 @@ def kitchen_continue():
             hallway()
             break
         elif option == "b":
-            print("You chose to pick up the shiny box...\n"
-                  " This was a hidden lever that opens a trap door,"
+            print("\nYou chose to pick up the shiny box...\n"
+                  "This was a hidden lever that opens a trap door,"
                   " you fall down the trap door to your painful death.\n")
             time.sleep(1)
-            print("Bad luck.\n"
-                  "You have been consumed by THE HAUNTED MANSION!\n")
+            print("Bad luck!\n")
+            print("You have been consumed by THE HAUNTED MANSION!\n")
+            time.sleep(2)
             play_again()
         else:
             print("Invalid input. Please choose option a or b")
@@ -239,12 +240,12 @@ def ballroom():
         time.sleep(1)
         print("The room is huge and has no light...\n")
         time.sleep(1)
-        print("You can't see a thing\n")
+        print("You can't see a thing.\n")
         time.sleep(1)
         print("You stretch your arms out to see if you can feel anything.\n")
         time.sleep(1)
         print("You get on your hands and knees and begin searching for "
-              "anything of use\n")
+              "anything of use.\n")
         time.sleep(1)
         print("However, you have a decision to make...\n")
         ballroom_continue()
@@ -269,7 +270,7 @@ def ballroom_continue():
         option = input("Do you:\na) Search Left\nb) Search Right\n"
                        "c) Search Straight Ahead\n> ")
         if option == "a":
-            print("You chose to search Left\n")
+            print("\nYou chose to search Left\n")
             time.sleep(1)
             print("You feel a metallic item under your hands\n")
             time.sleep(1)
@@ -297,9 +298,9 @@ def ballroom_continue():
             time.sleep(2)
             hallway()
         elif option == "b":
-            print("You chose to search Right\n")
+            print("\nYou chose to search Right\n")
             time.sleep(1)
-            print("You aimless search around the floor and try "
+            print("You aimlessly search around the floor and try "
                   "to find something to help\n")
             time.sleep(2)
             print("You find nothing but cobwebs\n")
@@ -308,7 +309,7 @@ def ballroom_continue():
             time.sleep(1)
             ballroom_continue()
         elif option == "c":
-            print("You chose to search straight ahead\n")
+            print("\nYou chose to search straight ahead\n")
             time.sleep(1)
             print("You suddenly see a pair of white eyes, staring "
                   "straight at you..\n")
@@ -319,8 +320,8 @@ def ballroom_continue():
             time.sleep(1)
             print("You have been eaten alive\n")
             time.sleep(1)
-            print("Bad luck\n")
-            print("You have been consumed by THE HAUNTED MANSION\n")
+            print("Bad luck!\n")
+            print("You have been consumed by THE HAUNTED MANSION!\n")
             time.sleep(2)
             play_again()
         else:
@@ -412,8 +413,9 @@ def library():
                 time.sleep(1)
                 print("You are dead in a matter of minutes\n")
                 time.sleep(3)
-                print("Bad Luck\n")
-                print("You have been consumed by THE HAUNTED MANSION\n")
+                print("Bad luck!\n")
+                print("You have been consumed by THE HAUNTED MANSION!\n")
+                time.sleep(2)
                 play_again()
             elif options == 4 and hammer is True:
                 print("You smash the crate open\n")
@@ -653,8 +655,9 @@ def office():
                 time.sleep(2)
                 print("You have fallen to your death.\n")
                 time.sleep(3)
-                print("Bad Luck\n")
-                print("You have been consumed by THE HAUNTED MANSION\n")
+                print("Bad luck!\n")
+                print("You have been consumed by THE HAUNTED MANSION!\n")
+                time.sleep(2)
                 play_again()
             elif options == 3 and code is True:
                 print("Do you remember the code from the ripped up pieces"
@@ -705,8 +708,9 @@ def stairs():
     print("You are caught by the ghostly figure chasing you and fall to "
           "a painful death\n")
     time.sleep(2)
-    print("Bad luck.\n"
-          "You have been consumed by THE HAUNTED MANSION!\n")
+    print("Bad luck!\n")
+    print("You have been consumed by THE HAUNTED MANSION!\n")
+    time.sleep(2)
     play_again()
 
 
