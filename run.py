@@ -348,7 +348,7 @@ def library():
     """
     print("You have entered the mansions Library\n")
     time.sleep(2)
-    print("Luckily, vision is clear in this room as it's "
+    print("Luckily, vision is clear in this room as it's"
           " illuminated by candle light\n")
     time.sleep(2)
     print("You search the room for clues or something useful\n")
@@ -379,7 +379,7 @@ def library():
         try:
             options = int(input(f"Which do you choose? {decisions}:\n> "))
             if options == 1:
-                print("You chose option 1...\n")
+                print("\nYou chose option 1...\n")
                 time.sleep(2)
                 print("You go to grab the book but it acts like a lever...\n")
                 time.sleep(2)
@@ -388,7 +388,7 @@ def library():
                 print("Being inquisitive you walk through the door...\n")
                 dining_hall()
             elif options == 2:
-                print("You chose option 2\n")
+                print("\nYou chose option 2\n")
                 time.sleep(2)
                 print("The crate is tough and made of solid wood\n")
                 time.sleep(2)
@@ -402,7 +402,7 @@ def library():
                 time.sleep(2)
                 hallway()
             elif options == 3:
-                print("You chose option 3\n")
+                print("\nYou chose option 3\n")
                 tim.sleep(2)
                 print("You have left the library and leave all "
                       " possible help behind\n")
@@ -422,7 +422,7 @@ def library():
                 time.sleep(2)
                 play_again()
             elif options == 4 and hammer is True:
-                print("You smash the crate open\n")
+                print("\nYou smash the crate open\n")
                 time.sleep(2)
                 print("Inside you see tiny ripped up pieces of paper\n")
                 time.sleep(2)
@@ -529,10 +529,11 @@ def dining_hall_continue():
     time.sleep(3)
     print("")
     print("This could be really helpful...\n")
-    time.slep(2)
+    time.sleep(2)
     print("You search the papers on the floor for the blueprints\n")
     time.sleep(3)
     print("You find them! But only for the ground floor...\n")
+    time.sleep(3)
     print(" -------------------------------------------------- ")
     print("|                                                  |")
     print("|                    Ballroom                      |")
@@ -575,11 +576,11 @@ def dining_hall_continue():
             global blueprints
             blueprints = True
             print("")
-            print("You go back to the hallway in search for the safe with "
+            print("\nYou go back to the hallway in search for the safe with "
                   "the spare key")
             hallway()
         if choice == "b":
-            print("You leave them behind. You can always come back for"
+            print("\nYou leave them behind. You can always come back for"
                   " these\n")
             print("You head back to the hallway")
             hallway()
@@ -610,18 +611,18 @@ def office():
     while True:
         decision = input("Please type 'a' or 'b':\n> ")
         if decision == "a":
-            print("You leave the office and ignore temptation")
+            print("\nYou leave the office and ignore temptation")
             time.sleep(2)
             hallway()
         elif decision == "b":
-            print("You open the hatch and see a safe!")
+            print("\nYou open the hatch and see a safe!")
             time.sleep(2)
             break
         else:
-            print("Incorrect input. Please type 'a' or 'b'")
+            print("\nIncorrect input. Please type 'a' or 'b'")
             continue
         
-    print("You have another decision to make...\n")
+    print("\nYou have another decision to make...\n")
     time.sleep(2)
     print("Do you...\n")
     time.sleep(2)
@@ -640,7 +641,7 @@ def office():
         try:
             options = int(input(f"Which do you choose? {option}:\n> "))
             if options == 1:
-                print("You chose option 1...\n")
+                print("\nYou chose option 1...\n")
                 time.sleep(2)
                 print("How could you possibly guess this code...\n")
                 time.sleep(2)
@@ -649,7 +650,7 @@ def office():
                 time.sleep(2)
                 hallway()
             elif options == 2:
-                print("You chose option 2\n")
+                print("\nYou chose option 2\n")
                 time.sleep(2)
                 print("Gambling your fate you enter some numbers in\n")
                 time.sleep(2)
@@ -666,7 +667,7 @@ def office():
                 time.sleep(2)
                 play_again()
             elif options == 3 and code is True:
-                print("Do you remember the code from the ripped up pieces"
+                print("\nDo you remember the code from the ripped up pieces"
                       " of paper in the Library\n")
                 time.sleep(2)
                 print("You carefully type them in...\n")
@@ -702,7 +703,7 @@ def stairs():
     This ends the game and is not an interactive room.
     play_again function will be called for the user try again.
     """
-    print("You decided to take the stairs\n")
+    print("\nYou decided to take the stairs\n")
     time.sleep(1)
     print("You've left all rooms unsearched...\n")
     time.sleep(2)
