@@ -100,7 +100,7 @@ def start_game():
             hallway()
             break
         else:
-            print("Invalid input. Please type 'yes' or 'no'.\n")
+            print("Incorrect input. Please type 'yes' or 'no'.\n")
             continue
 
 
@@ -154,7 +154,8 @@ def hallway():
             stairs()
             break
         else:
-            print("\nInvalid input. Please choose a number between 1 and 6\n")
+            print("\nIncorrect input. Please choose a number between 1"
+                  " and 6\n")
             continue
 
 
@@ -231,7 +232,7 @@ def kitchen_continue():
             time.sleep(2)
             play_again()
         else:
-            print("Invalid input. Please choose option a or b")
+            print("\nIncorrect input. Please choose option a or b\n")
             continue
 
 
@@ -343,7 +344,7 @@ def ballroom_continue():
             time.sleep(2)
             play_again()
         else:
-            print("Invalid input, please choose: a, b or c")
+            print("\nIncorrect input, please choose: a, b or c\n")
             continue
 
 
@@ -477,10 +478,10 @@ def library_continue():
                       "way out...\n")
                 hallway()
             else:
-                print(f"Incorrect input. Please choose {decisions}.")
+                print(f"\nIncorrect input. Please choose {decisions}.\n")
                 continue
         except ValueError:
-            print(f"Incorrect input. Please choose {decisions}.")
+            print(f"\nIncorrect input. Please choose {decisions}.\n")
             continue
 
 
@@ -606,7 +607,7 @@ def dining_hall_continue():
             print("You head back to the hallway")
             hallway()
         else:
-            print("Incorrect input. Please type 'a' or 'b'")
+            print("\nIncorrect input. Please type 'a' or 'b'\n")
             continue
 
 
@@ -712,10 +713,10 @@ def office():
                     print("code incorrect, please try again.")
                     continue
             else:
-                print(f"Incorrect input. Please choose {options}.")
+                print(f"\nIncorrect input. Please choose {options}.\n")
                 continue
         except ValueError:
-            print(f"Incorrect input. Please choose {options}.")
+            print(f"\nIncorrect input. Please choose {options}.\n")
             continue
 
 
@@ -769,7 +770,7 @@ def play_again():
             print("\nNever mind... Thanks for playing and come back soon!\n")
             end_game()
         else:
-            print("Invalid input. Please type 'yes' or 'no'.")
+            print("Incorrect input. Please type 'yes' or 'no'.")
             continue
 
 
