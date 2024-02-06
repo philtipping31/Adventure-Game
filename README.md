@@ -1,6 +1,10 @@
 # The Haunted Mansion - Text Based Adventure Game.
 
+![Intro](docs/intro_gif.gif)
+
 ## How to Play / Game Objective
+
+
 
 ## User Experience
 
@@ -13,6 +17,7 @@
 * [GitHub](https://github.com/) has been used to store the code, images, readMe file and other content. 
 * [Heroku](https://dashboard.heroku.com/apps) was used to deploy the game to the browser to allow playing in a terminal.
 * Python module [time](https://docs.python.org/3/library/time.html) has been used to allow for a delay between lines of text displaying.
+* I used the chrome extension [Screen Recorder](https://chromewebstore.google.com/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) to record the deployed terminal before coverting into a gif.
 * [Ezgif](https://ezgif.com/video-to-gif) was used to change video recordings into gifs for ReadME document.
 
 
