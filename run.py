@@ -29,6 +29,7 @@ def intro():
     """
     Displays the game intro and sets the scene.
     """
+    time.sleep(2)
     print("It's a dark and cold night, you are lost and alone...\n")
     time.sleep(2)
     print("You feel as if you are being watched...\n")

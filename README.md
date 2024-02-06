@@ -16,6 +16,8 @@ The game will ask the user if they want to attempt to escape or accepct their fa
 
 The user will be able to choose out of 5 rooms and the stairs to explore the mansion. Each room will have some form of interaction that user will need to input via text. These options can result in a variety of outcomes and will change the direction of the game based on what is chosen.
 
+The live link can be found here - [The Haunted Mansion - Text Based Adventure Game](https://the-haunted-mansion-d168abdc0e4f.herokuapp.com/)
+
 
 ## User Experience
 
