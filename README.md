@@ -4,11 +4,62 @@
 
 ## How to Play / Game Objective
 
+The Haunted Mansion is an easy to play python terminal game which can be interacted with by the end user with the use of text. The project runs in the Code Institute terminal Heroku.
+
+The objective of the game is to navigate through the Haunted Mansion and escape without dying. 
+
+The game will firstly load in and set the scene, welcoming them to The Haunted Mansion.
+
+The game objectives will shortly follow to give the end user an understanding of what they need to do.
+
+The game will ask the user if they want to attempt to escape or accepct their fate. If they choose yes, the game will continue to their first set of choices. If they choose not to escape, the game will result in the player dying. However, the option to play again will be shown. 
+
+The user will be able to choose out of 5 rooms and the stairs to explore the mansion. Each room will have some form of interaction that user will need to input via text. These options can result in a variety of outcomes and will change the direction of the game based on what is chosen.
 
 
 ## User Experience
 
+As a first time user I want to know the purpose of the game.
+
+As a first time user I want to know how to play the game. 
+
+As a first time user I want to be told if I have entered text incorrectly.
+
+As a first time user I want to be able to have the option of playing again if I do not win or even if I do win.
+
+As a first time user I want to know when I have lost and when I have won the game. 
+
+As a returning user, all of the above experiences should also apply.
+
 ## Features
+
+### User Input
+
+Interaction with the game is the main part of The Haunted Mansion. All rooms will require some form of intereaction where a user is required to make a decision which can result in either collecting items, moving through rooms, dicsovering dead ends, encountering enemies that may result in death.
+
+### Visual Features
+
+I created visual pictures in the terminal for items that can be collected throughout the mansion.
+
+### Backpack
+
+The backpack is an inventory of the items the user can collect throughout the mansion. Each time an item is collected the backpack contents will be shown to the user.
+
+### Rooms
+
+Rooms can be explored by the user selecting from the list when they are in the hallway. A feature is in place that if the user has visited a room previously and collected the item they will be told so they do not enter the room again. This will automatically send them back to the hallway to choose a different option.
+
+### Win and Loss 
+
+The terminal will always display when a user has lost the game as well as when they win the game.
+
+### Replay
+
+The user will always be prompted with the play again function when the following occurs:
+
+- Chooses not to play the game initially.
+- Fails a room and dies at any point throughout.
+- After winning the game.
 
 ## Technologies
 
@@ -31,6 +82,63 @@ The project was tested via [Code Institutes PEP8 Linter](https://pep8ci.herokuap
 
 ### Project Testing
 
+All scenarios were tested locally on CodeAnywhere terminal and then again after deployment on the Heroku App.
+
+The below flow chart was used as reference to ensure each function performed the correct actions based on the users input and status.
+
+![LucidChart]
+
+
+
+### Functions
+
+* intro()
+
+
+* start_game()
+
+
+* play_again()
+
+
+* end_game()
+
+
+* hallway()
+
+
+* kitchen()
+
+
+* kitchen_continue()
+
+
+* ballroom()
+
+
+* ballroom_continue()
+
+
+* library()
+
+
+* library_continue()
+
+
+* dining_hall()
+
+
+* office()
+
+
+* stairs()
+
+
+### Bugs / Other
+
+Luckily most bugs occured due to typos in functions and time.sleep typos.
+
+I had an issue with declaring global variables as they were called before. This was due to referencing them more than once in a function based on the way I wanted to set it up. I decided to seperate functions with _continue when declaring global variables as True or False.
 
 
 ## Deployment
