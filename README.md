@@ -43,7 +43,7 @@ Interaction with the game is the main part of The Haunted Mansion. All rooms wil
 
 I created visual pictures in the terminal for items that can be collected throughout the mansion.
 
-### Backpack
+### Backpack
 
 The backpack is an inventory of the items the user can collect throughout the mansion. Each time an item is collected the backpack contents will be shown to the user.
 
@@ -88,13 +88,13 @@ All scenarios were tested locally on CodeAnywhere terminal and then again after 
 
 The below flow chart was used as reference to ensure each function performed the correct actions based on the users input and status.
 
-![LucidChart]
-
+![LucidChart](docs/workflow_chart.png)
 
 
 ### Functions
 
 * intro()
+
 
 
 * start_game()
