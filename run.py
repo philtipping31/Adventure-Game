@@ -86,7 +86,7 @@ def start_game():
             hallway()
             break
         else:
-            print("Invalid input. Please type 'yes' or 'no'.")
+            print("Invalid input. Please type 'yes' or 'no'.\n")
             continue
 
 
@@ -140,7 +140,7 @@ def hallway():
             stairs()
             break
         else:
-            print("\nInvalid input. Please choose a number between 1 and 6")
+            print("\nInvalid input. Please choose a number between 1 and 6\n")
             continue
 
 
@@ -154,7 +154,7 @@ def kitchen():
     if hammer is True:
         print("You've already collected the item from this room\n")
         time.sleep(2)
-        print("Go back to hallway and choose a different door\n")
+        print("Go back to the hallway and choose a different door\n")
         time.sleep(2)
         hallway()
     else:
@@ -201,7 +201,7 @@ def kitchen_continue():
             print(backpack)
             global hammer
             hammer = True
-            time.sleep(1)
+            time.sleep(3)
             print("\nYou wisely decide to ignore temptation and"
                   " leave the shiny box\n")
             print("You go back to the hallway to choose another door\n")
@@ -233,7 +233,7 @@ def ballroom():
     if key is True:
         print("You've already collected the item from this room\n")
         time.sleep(2)
-        print("Go back to hallway and choose a different door\n")
+        print("Go back to the hallway and choose a different door\n")
         time.sleep(2)
         hallway()
     else:
@@ -291,7 +291,8 @@ def ballroom_continue():
             print(backpack)
             global key
             key = True
-            print("You search for the door to try the key\n")
+            time.sleep(3)
+            print("\nYou search for the door to try the key\n")
             time.sleep(2)
             print("You somehow locate the door and try the key\n")
             time.sleep(2)
@@ -342,7 +343,7 @@ def library():
     if code is True:
         print("You've already collected the item from this room\n")
         time.sleep(2)
-        print("Go back to hallway and choose a different door\n")
+        print("Go back to the hallway and choose a different door\n")
         time.sleep(2)
         hallway()
     else:
@@ -456,7 +457,7 @@ def library_continue():
                       " the paper burns to ashes...\n")
                 time.sleep(2)
                 print("Hopefully you can remember this code for later...\n")
-                time.sleep(5)
+                time.sleep(7)
                 clear_display()
                 print("You go back to hallway to look for a possible "
                       "way out...\n")
