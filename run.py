@@ -678,7 +678,7 @@ def office():
                 time.sleep(2)
                 numbers = input("Type your access code here: ")
                 time.sleep(2)
-                print("ACCESS DENIED\n")
+                print("\nACCESS DENIED\n")
                 time.sleep(2)
                 print("The floor beneath you disappears in a flash\n")
                 time.sleep(2)
