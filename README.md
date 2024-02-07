@@ -216,6 +216,10 @@ The below flow chart was used as reference to ensure each function performed the
 
 #### clear_display()
 
+| Test                                                                                  | Action                                                                                                                                                          | Expected                                                                          | Result |
+| ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------ |
+| Does clear display correctly clear the display when called. Tested on Mac and Windows | Run through game to get to the stages where clear_display is called and check that terminal clears correctly and then continues with the next function or text. | Console correctly clears when called on Macbook Pro and Lenovo Thinkpad (Windows) | Pass   |
+
 
 ### Bugs / Other
 
