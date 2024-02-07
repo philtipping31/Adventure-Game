@@ -189,14 +189,37 @@ The below flow chart was used as reference to ensure each function performed the
 
 #### kitchen()
 
+| Test                                                                                                                                                                                            | Action                                                                                                                                                             | Expected                                                                                                                                               | Result |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
+| Go to the kitchen before collecting the item from this room to ensure kitchen_continue is called                                                                                                | Type 1 in the hallway function to call kitchen function. As item has not been collected wait for the kitchen continue function to call and text display correctly. | After typing 1 in the hallway function, kitchen correctly loads and then calls kitchen continue as item is set to False.                               | Pass   |
+| Go to the kitchen after already being in the room and collecting the item to ensure the function checks if the global item is true. Notfiying the user of this and calling the hallway function | Visit the kitchen function and collect the item, then enter 1 again in the hallway.                                                                                | Kitchen function prints out that the user already has collected the item from this room and sends them back to the hallway to choose a different door. | Pass   |
+
+
 
 #### kitchen_continue()
+
+| Test                                                                                                                                                       | Action                                                                                | Expected                                                                                                                                      | Result |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Does function call after user has entered the kitchen and does not have the item                                                                           | Enter the kitchen for the first time                                                  | User gets kitchen function that goes straight to kitchen continue and displays correctly in the terminal.                                     | Pass   |
+| Does input option appear and display correctly                                                                                                             | Wait for text to finish printing and see input option for user to enter their choice. | Input section appears correctly and allows user to input their choice.                                                                        | Pass   |
+| If user enters a as option does the hammer correctly append to the backpack and get set as True in global scope. Does the hallway function then get called | Enter the kitchen and type a in the console.                                          | Hammer is appended to backpack and shows in console also setting item to True. User is then taken back to the hallway to choose another room. | Pass   |
+| If user enters option b does the game end correctly, calling the play_again function                                                                       | Enter the kitchen and type b in the console                                           | Game over appears, telling the user they have failed the game and then loads play_again function so they can choose to play again or not.     | Pass   |
+| If user enters anthing else other than 'a' or 'b' the prompt is shown for incorrect input and asks them to input a or b again.                             | Enterr the kitchen and type something else other than a or b into the console.        | Message correctly shows that the user has enterered something other than a or b and asks the question again.                                  | Pass   |
+
 
 
 #### ballroom()
 
+| Test                                                                                                                                                                                             | Action                                                                                                                                                              | Expected                                                                                                                                                | Result |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Go to the ballroom before collecting the item from this room to ensure ballroom_continue is called                                                                                               | Type 2 in the hallway function to call ballroom function. As item has not been collected wait for the ballrom continue function to call and text display correctly. | After typing 1 in the hallway function, ballroom correctly loads and then calls kitchen continue as item is set to False.                               | Pass   |
+| Go to the ballroom after already being in the room and collecting the item to ensure the function checks if the global item is true. Notfiying the user of this and calling the hallway function | Visit the ballroom function and collect the item, then enter 2 again in the hallway.                                                                                | Ballroom function prints out that the user already has collected the item from this room and sends them back to the hallway to choose a different door. | Pass   |
+
+
 
 #### ballroom_continue()
+
+
 
 
 #### library()
@@ -219,6 +242,7 @@ The below flow chart was used as reference to ensure each function performed the
 | Test                                                                                  | Action                                                                                                                                                          | Expected                                                                          | Result |
 | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------ |
 | Does clear display correctly clear the display when called. Tested on Mac and Windows | Run through game to get to the stages where clear_display is called and check that terminal clears correctly and then continues with the next function or text. | Console correctly clears when called on Macbook Pro and Lenovo Thinkpad (Windows) | Pass   |
+
 
 
 ### Bugs / Other
