@@ -67,7 +67,7 @@ def intro():
     time.sleep(1)
     print("Pick and choose from the options and explore the rooms.\n")
     time.sleep(1)
-    print("You will face decisions throughout the mansion...")
+    print("You will face decisions throughout the mansion...\n")
     print("but be careful...\n")
     print("your decisions will affect the route of the game.\n")
     time.sleep(2)
@@ -118,7 +118,7 @@ def hallway():
     print("There are 5 doors for you to choose from...\n")
     print("... or do you take the stairs?")
     print("")
-    time.sleep(1)
+    time.sleep(2)
     print("1. A door to the kitchen")
     print("2. A door to the ballroom")
     print("3. A door to the library")
@@ -126,7 +126,7 @@ def hallway():
     print("5. A door to the office")
     print("6. The stairs to the top floor")
     print("")
-    time.sleep(1)
+    time.sleep(2)
     while True:
         chooseRoute = input("What route do you choose?\n"
                             "\nPlease type a number between 1 to 6\n> ")
@@ -201,7 +201,7 @@ def kitchen_continue():
                        " b) Pick up the shiny box\n> ")
         if option == "a":
             print("\nYou chose to open the cupboard, inside you find a"
-                  " hammer. Put this in your backpack as it may come"
+                  " hammer.\n Put this in your backpack as it may come"
                   " in useful later.\n")
             time.sleep(1)
             print("""

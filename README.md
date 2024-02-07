@@ -39,21 +39,43 @@ As a returning user, all of the above experiences should also apply.
 
 Interaction with the game is the main part of The Haunted Mansion. All rooms will require some form of intereaction where a user is required to make a decision which can result in either collecting items, moving through rooms, dicsovering dead ends, encountering enemies that may result in death.
 
+![User Input](docs/user_input.png)
+
+![User Input Rooms](docs/user_input_rooms.png)
+
 ### Visual Features
 
 I created visual pictures in the terminal for items that can be collected throughout the mansion.
+
+![Hammer](docs/hammer.png)     
+
+
+![Key](docs/key.png) 
+
+
+![Blueprints](docs/floorplan.png)
 
 ### Backpack
 
 The backpack is an inventory of the items the user can collect throughout the mansion. Each time an item is collected the backpack contents will be shown to the user.
 
+![Backpack](docs/backpack.png)
+
 ### Rooms
 
 Rooms can be explored by the user selecting from the list when they are in the hallway. A feature is in place that if the user has visited a room previously and collected the item they will be told so they do not enter the room again. This will automatically send them back to the hallway to choose a different option.
 
+![Rooms](docs/rooms.png)
+
+![Rooms re-enter](docs/room_re_enter.png)
+
 ### Win and Loss 
 
-The terminal will always display when a user has lost the game as well as when they win the game.
+The terminal will always display when a user has lost the game as well as when they win the game. After this the user will be given the option to play again.
+
+![Loss](docs/game_loss.png)
+
+![Win](docs/game_win.png)
 
 ### Replay
 
@@ -62,6 +84,12 @@ The user will always be prompted with the play again function when the following
 - Chooses not to play the game initially.
 - Fails a room and dies at any point throughout.
 - After winning the game.
+
+![Play Again](docs/play_again.png)
+
+![Play Again No](docs/no_play_again.png)
+
+
 
 ## Technologies
 
@@ -93,11 +121,24 @@ The below flow chart was used as reference to ensure each function performed the
 
 ### Functions
 
-* intro()
+#### intro()
+
+| Test                                                        | Action                                                                                                                     | Expected                                                     | Result |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------ |
+| Does the intro function call when the terminal loads        | Load terminal in CodeAnywhere and Heroku. Check if intro function runs properly.                                           | Intro function calls correctly when the terminal loads       | Pass   |
+| Does the intro function display all text correctly          | Load terminal in CodeAnywhere and Heroku. Check if all text shows correctly in terminal                                    | Intro function displays all text correctly in terminal       | Pass   |
+| At the end of the function does start_game() call correctly | In the terminal of CodeAnywhere and Heroku when the intro function ends make sure the start game function loads correctly. | At the end of the function start_game() is called correctly. | Pass   |
 
 
+#### start_game()
 
-* start_game()
+| Test                                                                                                                         | Action                                                                                                                           | Expected                                                                                                                   | Result |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Does start_game load in after intro()                                                                                        | Load terminal in CodeAnywhere and Heroku. Intro loads and check if start game function loads in after intro finishes             | start_game correctly shows after intro finishes.                                                                           | Pass   |
+| Does the function correctly ask the user whether they want to play the game or not.                                          | Check if input section appears and allows user to type                                                                           | User can type input section on whether they want to play the game or not                                                   | Pass   |
+| If user selects 'Yes' does the hallway() function correctly load                                                             | Type yes into the console and see if the hallway() function correctly loads                                                      | After typing yes, hallway() function loads in correctly                                                                    | Pass   |
+| If the user selects 'No' does the text display correctly and then load the play_again function                               | Type No into the terminal. Check that the correct text displays. Check for play_again function to be callled.                    | Typing no ends the game for the user but then loads the play again function asking the user if they do want to play again. | Pass   |
+| If the user enters text that is not 'yes' or 'no' does the terminal display incorrect input and ask the user to input again. | Type any other text into the input section of the terminal. Check that the error text shows and asks the user to type yes or no. | Incorrect input message shows up if anything else is entered besides, 'yes' or 'no'. The question is then asked again.     | Pass   |
 
 
 * play_again()
@@ -185,6 +226,8 @@ I used [Geeks for Geeks](https://www.geeksforgeeks.org/clear-screen-python/) for
 I used [Lucid Chart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20chart&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236004&km_CPC_TargetID=kwd-55720648523&km_CPC_Country=1006984&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gad_source=1&gclid=Cj0KCQiAzoeuBhDqARIsAMdH14H3VQDVvCMFaJMPK_U96cnlAH2tstOaQgt56FI7YiNTu4H57idfyRQaAr1gEALw_wcB) to create the flow diagram of the project. This helped with putting the project together and testing the project during and upon completion.
 
 I used [Code Institutes PEP8 Linter](https://pep8ci.herokuapp.com/) to run my python code through to check for any errors.
+
+[Table to Markdown](https://tabletomarkdown.com/) to use tables in ReadME document for testing.
 
 Thanks to Daisty Mc Girr for assisting me through this project and answering questions I had around coding and testing. Also giving me the idea of doing an adventure based text game.
 
