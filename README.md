@@ -148,41 +148,53 @@ The below flow chart was used as reference to ensure each function performed the
 
 #### play_again()
 
+| Test                                                                                                                         | Action                                                                                                                                                                                                                                  | Expected                                                                                                                                                         | Result |
+| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Does play_again load in after every time the user loses the game or chooses not to play.                                     | Load terminal in CodeAnywhere and Heroku. Using the flowchart for reference go through each scenerio where play_again() is called and check the play again function shows in terminal asking the user to input yes or no to play again. | User sees option to type yes or no to play again each time the function is called. After losing, winning the game or choosing not to play the game at the start. | Pass   |
+| Does the function correctly ask the user whether they want to play the game againor not.                                     | Check if input section appears and allows user to type. Clearly showing whether to type yes or no.                                                                                                                                      | User can type input section on whether they want to play the game again or not                                                                                   | Pass   |
+| If user selects 'Yes' does the console clear correctly                                                                       | Type yes into the console and see if the intro() function correctly loads                                                                                                                                                               | After typing yes, intro() function loads in correctly                                                                                                            | Pass   |
+| If user selects 'Yes' does the backpack list clear correctly                                                                 | Type yes to play again, using the workflow for reference go into a room and collect and item to ensure backpack is empty when the item is appended to the list.                                                                         | No items from the previous playthrough have carried over and the backpack is empty. Appending newly collected items from the current playthrough                 | Pass   |
+| If user selects 'Yes' do all global items reset to False                                                                     | Type yes to play again, using the workflow, go into a room with a global item. Check if you are able to enter the room as normal even if you had the item in the previous playthrough.                                                  | All rooms can be accessed as if it was the first time even after a playthrough. Functions work correctly based on global item status.                            | Pass   |
+| If user selects 'Yes' does the intro() function call correctly.                                                              | Type Yes to play again and ensure the intro function is called and runs correctly.                                                                                                                                                      | After clicking yes, console clears and game restarts running the intro() function.                                                                               | Pass   |
+| If the user selects 'No' does the text display correctly and then load the play_again function                               | Type No into the terminal. Check that the correct text displays. User will still be given the option to play again and therefore calls play_again function again.                                                                       | Typing no ends the game for the user but then loads the play again function asking the user if they do want to play again.                                       | Pass   |
+| If the user enters text that is not 'yes' or 'no' does the terminal display incorrect input and ask the user to input again. | Type any other text into the input section of the terminal. Check that the error text shows and asks the user to type yes or no.                                                                                                        | Incorrect input message shows up if anything else is entered besides, 'yes' or 'no'. The question is then asked again.                                           | Pass   |
 
 
 
-
-* end_game()
-
-
-* hallway()
+#### end_game()
 
 
-* kitchen()
+#### hallway()
 
 
-* kitchen_continue()
+#### kitchen()
 
 
-* ballroom()
+#### kitchen_continue()
 
 
-* ballroom_continue()
+#### ballroom()
 
 
-* library()
+#### ballroom_continue()
 
 
-* library_continue()
+#### library()
 
 
-* dining_hall()
+#### library_continue()
 
 
-* office()
+#### dining_hall()
 
 
-* stairs()
+#### office()
+
+
+#### stairs()
+
+
+#### clear_display()
 
 
 ### Bugs / Other
