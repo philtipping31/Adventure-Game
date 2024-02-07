@@ -121,7 +121,9 @@ The below flow chart was used as reference to ensure each function performed the
 
 ### Functions
 
+
 #### intro()
+
 
 | Test                                                        | Action                                                                                                                     | Expected                                                     | Result |
 | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ------ |
@@ -130,7 +132,9 @@ The below flow chart was used as reference to ensure each function performed the
 | At the end of the function does start_game() call correctly | In the terminal of CodeAnywhere and Heroku when the intro function ends make sure the start game function loads correctly. | At the end of the function start_game() is called correctly. | Pass   |
 
 
+
 #### start_game()
+
 
 | Test                                                                                                                         | Action                                                                                                                           | Expected                                                                                                                   | Result |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -141,7 +145,11 @@ The below flow chart was used as reference to ensure each function performed the
 | If the user enters text that is not 'yes' or 'no' does the terminal display incorrect input and ask the user to input again. | Type any other text into the input section of the terminal. Check that the error text shows and asks the user to type yes or no. | Incorrect input message shows up if anything else is entered besides, 'yes' or 'no'. The question is then asked again.     | Pass   |
 
 
-* play_again()
+
+#### play_again()
+
+
+
 
 
 * end_game()
