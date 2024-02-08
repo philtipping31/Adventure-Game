@@ -647,20 +647,20 @@ def office():
             continue
     print("\nYou have another decision to make...\n")
     time.sleep(2)
-    print("Do you...\n")
-    time.sleep(2)
-    print("1. Do nothing, you don't know the code to get in!\n")
-    time.sleep(2)
-    print("2. Have a guess and see if you can guess the code.\n")
-    time.sleep(2)
-    if code is True:
-        print("3. Remember the code from earlier and type this in!\n")
-    time.sleep(2)
-    if code is True:
-        option = "(1, 2 or 3)"
-    else:
-        option = "(1 or 2)"
     while True:
+        print("Do you...\n")
+        time.sleep(2)
+        print("1. Do nothing, you don't know the code to get in!\n")
+        time.sleep(2)
+        print("2. Have a guess and see if you can guess the code.\n")
+        time.sleep(2)
+        if code is True:
+            print("3. Remember the code from earlier and type this in!\n")
+        time.sleep(2)
+        if code is True:
+            option = "(1, 2 or 3)"
+        else:
+            option = "(1 or 2)"
         try:
             options = int(input(f"Which do you choose? {option}:\n> "))
             if options == 1:
@@ -714,10 +714,10 @@ def office():
                     print("code incorrect, please try again.")
                     continue
             else:
-                print(f"\nIncorrect input. Please choose {options}.\n")
+                print(f"\nIncorrect input. Please choose {option}.\n")
                 continue
         except ValueError:
-            print(f"\nIncorrect input. Please choose {options}.\n")
+            print(f"\nIncorrect input. Please choose {option}.\n")
             continue
 
 
