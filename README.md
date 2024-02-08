@@ -97,10 +97,14 @@ The user will always be prompted with the play again function when the following
 * [LucidChart](https://www.lucidchart.com/pages/) was used to create the flow chart showing the game's logic.
 * [GitHub](https://github.com/) has been used to store the code, images, readMe file and other content. 
 * [Heroku](https://dashboard.heroku.com/apps) was used to deploy the game to the browser to allow playing in a terminal.
-* Python module [time](https://docs.python.org/3/library/time.html) has been used to allow for a delay between lines of text displaying.
 * I used the Chrome extension [Screen Recorder](https://chromewebstore.google.com/detail/screen-recorder/hniebljpgcogalllopnjokppmgbhaden) to record the deployed terminal before converting into a gif.
 * [Ezgif](https://ezgif.com/video-to-gif) was used to change video recordings into gifs for ReadME document.
 
+### Python Modules
+
+* Python module [time](https://docs.python.org/3/library/time.html) has been used to allow for a delay between lines of text displaying.
+* Python module [Sys os](https://docs.python.org/3/library/os.html)  was used to clear the terminal display.
+* Python module [Colorama](https://pypi.org/project/colorama/) was used to add coloured text in the terminal.
 
 ## Testing
 
@@ -365,7 +369,7 @@ I used [Code Institutes PEP8 Linter](https://pep8ci.herokuapp.com/) to run my py
 
 [Table to Markdown](https://tabletomarkdown.com/) to use tables in ReadME document for testing.
 
-Thanks to Daisty Mc Girr for assisting me through this project and answering questions I had around coding and testing. Also giving me the idea of doing an adventure based text game.
+Thanks to Daisy Mc Girr for assisting me through this project and answering questions I had around coding and testing. Also giving me the idea of doing an adventure based text game.
 
 The Code Institute lessons and Love Sandwiches walkthrough for knowledge on coding Python.
 

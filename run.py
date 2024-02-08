@@ -1,5 +1,6 @@
 import time
 from os import system, name
+from colorama import Fore, Style
 
 # The backpack is your inventory for collecting items in the mansion.
 backpack = []
@@ -155,8 +156,9 @@ def hallway():
             stairs()
             break
         else:
-            print("\nIncorrect input. Please choose a number between 1"
-                  " and 6\n")
+            print(Fore.RED + "\nIncorrect input. Please choose a number"
+                  " between 1 and 6\n")
+            print(Style.RESET_ALL)
             continue
 
 
