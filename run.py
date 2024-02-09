@@ -207,7 +207,7 @@ def kitchen_continue():
                        " b) Pick up the shiny box\n> ")
         if option.lower() == "a":
             print("\nYou chose to open the cupboard, inside you find a"
-                  " hammer.\n Put this in your backpack as it may come"
+                  " hammer.\nPut this in your backpack as it may come"
                   " in useful later.\n")
             time.sleep(1)
             print(Fore.YELLOW + """
@@ -321,13 +321,17 @@ def ballroom_continue():
             global key
             key = True
             time.sleep(3)
-            print("\nYou search for the door to try the key\n")
+            print("\nYou search for the door to get out of the Ballroom\n")
             time.sleep(2)
-            print("You somehow locate the door and try the key\n")
+            print("Somehow you locate the door in the darkness...\n")
             time.sleep(2)
-            print("IT WORKS!\n")
+            print("Its locked!!\n")
             time.sleep(2)
-            print("You escaped the ballroom and the hidden beast inside\n")
+            print("You get the key from your back pack to see if it works")
+            print("IT DOES!\n")
+            time.sleep(2)
+            print("You unlock the door and escaped the ballroom...\n")
+            print("and the hidden beast inside\n")
             time.sleep(2)
             hallway()
         elif option.lower() == "b":
@@ -496,12 +500,12 @@ def library_continue():
                 hallway()
             else:
                 print(Fore.RED + f"\nIncorrect input. Please choose"
-                      " {decisions}.\n")
+                      f" {decisions}.\n")
                 print(Style.RESET_ALL)
                 continue
         except ValueError:
             print(Fore.RED + f"\nIncorrect input. Please choose"
-                  " {decisions}.\n")
+                  f" {decisions}.\n")
             print(Style.RESET_ALL)
             continue
 
@@ -744,7 +748,7 @@ def office():
                     continue
             else:
                 print(Fore.RED + f"\nIncorrect input. Please choose"
-                      " {option}.\n")
+                      f" {option}.\n")
                 print(Style.RESET_ALL)
                 continue
         except ValueError:
