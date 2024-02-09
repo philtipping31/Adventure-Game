@@ -31,7 +31,7 @@ def intro():
     Displays the game intro and sets the scene.
     """
     time.sleep(2)
-    print("It's a dark and cold night, you are lost and alone...\n")
+    print("It's a dark, cold night, you are lost and alone...\n")
     time.sleep(2)
     print("You feel as if you are being watched...\n")
     time.sleep(2)
@@ -91,18 +91,19 @@ def start_game():
     while True:
         escape_mansion = input("Would you like to attempt your escape"
                                " from the HAUNTED MANSION? (yes/no):\n> ")
-        if escape_mansion == "no":
+        if escape_mansion.lower() == "no":
             print("\nYou have accepted your fate...\n")
             time.sleep(1)
             print("Enjoy your stay at the HAUNTED MANSION!\n")
             time.sleep(1)
             play_again()
             break
-        elif escape_mansion == "yes":
+        elif escape_mansion.lower() == "yes":
             hallway()
             break
         else:
-            print("Incorrect input. Please type 'yes' or 'no'.\n")
+            print(Fore.RED + "Incorrect input. Please type 'yes' or 'no'.\n")
+            print(Style.RESET_ALL)
             continue
 
 
@@ -206,13 +207,14 @@ def kitchen_continue():
                   " hammer.\n Put this in your backpack as it may come"
                   " in useful later.\n")
             time.sleep(1)
-            print("""
+            print(Fore.YELLOW + """
             ┌──────┐
             │      │
             │      ├────────┬─┬──┬─┐
             │      ├────────┘─┘──┘─┘
             │      │
             └──────┘""")
+            print(Style.RESET_ALL)
             time.sleep(2)
             backpack.append("Hammer")
             print("Backpack:")
