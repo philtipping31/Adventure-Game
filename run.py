@@ -202,7 +202,7 @@ def kitchen_continue():
     while True:
         option = input("Do you:\n a) Open the cupboard door \n"
                        " b) Pick up the shiny box\n> ")
-        if option == "a":
+        if option.lower() == "a":
             print("\nYou chose to open the cupboard, inside you find a"
                   " hammer.\n Put this in your backpack as it may come"
                   " in useful later.\n")
@@ -217,8 +217,9 @@ def kitchen_continue():
             print(Style.RESET_ALL)
             time.sleep(2)
             backpack.append("Hammer")
-            print("Backpack:")
+            print(Fore.MAGENTA + "Backpack:")
             print(backpack)
+            print(Style.RESET_ALL)
             global hammer
             hammer = True
             time.sleep(3)
@@ -227,17 +228,20 @@ def kitchen_continue():
             print("You go back to the hallway to choose another door\n")
             hallway()
             break
-        elif option == "b":
+        elif option.lower() == "b":
             print("\nYou chose to pick up the shiny box...\n"
                   "This was a hidden lever that opens a trap door,"
                   " you fall down the trap door to your painful death.\n")
             time.sleep(1)
-            print("Bad luck!\n")
+            print(Fore.RED + "Bad luck!\n")
             print("You have been consumed by THE HAUNTED MANSION!\n")
+            print(Style.RESET_ALL)
             time.sleep(2)
             play_again()
         else:
-            print("\nIncorrect input. Please choose option a or b\n")
+            print(Fore.RED + "\nIncorrect input. Please choose option"
+                  " a or b\n")
+            print(Style.RESET_ALL)
             continue
 
 
@@ -292,7 +296,7 @@ def ballroom_continue():
     while True:
         option = input("Do you:\na) Search Left\nb) Search Right\n"
                        "c) Search Straight Ahead\n> ")
-        if option == "a":
+        if option.lower() == "a":
             print("\nYou chose to search Left\n")
             time.sleep(1)
             print("You feel a metallic item under your hands\n")
@@ -321,7 +325,7 @@ def ballroom_continue():
             print("You escaped the ballroom and the hidden beast inside\n")
             time.sleep(2)
             hallway()
-        elif option == "b":
+        elif option.lower() == "b":
             print("\nYou chose to search Right\n")
             time.sleep(2)
             print("You aimlessly search around the floor and try "
@@ -332,7 +336,7 @@ def ballroom_continue():
             print("Go back and choose a different direction\n")
             time.sleep(1)
             ballroom_continue()
-        elif option == "c":
+        elif option.lower() == "c":
             print("\nYou chose to search straight ahead\n")
             time.sleep(2)
             print("You suddenly see a pair of white eyes, staring "
@@ -596,7 +600,7 @@ def dining_hall_continue():
         choice = input("Do you:\na) Take the letter and blueprints\n"
                        "b) Decide they are of no use and leave them"
                        " behind.\n> ")
-        if choice == "a":
+        if choice.lower() == "a":
             backpack.append("Mansion Details")
             print("Backpack:")
             print(backpack)
@@ -606,7 +610,7 @@ def dining_hall_continue():
             print("\nYou go back to the hallway in search for the safe with "
                   "the spare key")
             hallway()
-        if choice == "b":
+        if choice.lower() == "b":
             print("\nYou leave them behind. You can always come back for"
                   " these\n")
             print("You head back to the hallway")
@@ -638,11 +642,11 @@ def office():
     time.sleep(2)
     while True:
         decision = input("Please type 'a' or 'b':\n> ")
-        if decision == "a":
+        if decision.lower() == "a":
             print("\nYou leave the office and ignore temptation")
             time.sleep(2)
             hallway()
-        elif decision == "b":
+        elif decision.lower() == "b":
             print("\nYou open the hatch and see a safe!")
             time.sleep(2)
             break
@@ -758,7 +762,7 @@ def play_again():
     """
     while True:
         play_again = input("Would you like to play again? (yes/no):\n> ")
-        if play_again == "yes":
+        if play_again.lower() == "yes":
             backpack.clear()
             global hammer
             hammer = False
@@ -771,7 +775,7 @@ def play_again():
             clear_display()
             intro()
             break
-        elif play_again == "no":
+        elif play_again.lower() == "no":
             print("\nNever mind... Thanks for playing and come back soon!\n")
             end_game()
         else:
