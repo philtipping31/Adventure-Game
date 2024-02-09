@@ -327,7 +327,8 @@ def ballroom_continue():
             time.sleep(2)
             print("Its locked!!\n")
             time.sleep(2)
-            print("You get the key from your back pack to see if it works")
+            print("You get the key from your back pack to see if it works\n")
+            time.sleep(3)
             print("IT DOES!\n")
             time.sleep(2)
             print("You unlock the door and escaped the ballroom...\n")
@@ -483,8 +484,10 @@ def library_continue():
                 print("You soon realise there are some numbers written "
                       "on the pieces\n")
                 time.sleep(2)
-                print("You match them all together and it reads:\n "
-                      " ACCESS CODE: 7462\n")
+                print(Fore.GREEN + "You match them all together and it"
+                      "reads:\n "
+                      "ACCESS CODE: 7462\n")
+                print(Style.RESET_ALL)
                 global code
                 code = True
                 time.sleep(2)
@@ -820,8 +823,10 @@ def game_win():
     Play again will be called at the end of function to allow
     user the choice to play again.
     """
-    print("Congratulations! You escaped the Haunted Mansion\n")
+    print(Fore.GREEN + "Congratulations! You escaped the"
+          " Haunted Mansion\n")
     print("Thanks for playing, come back soon.")
+    print(Style.RESET_ALL)
     time.sleep(3)
     end_game()
 
