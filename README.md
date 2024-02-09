@@ -55,6 +55,8 @@ The user will also be notified if any incorrect input has been added to the term
 
 .lower() has been added to the input options to allow the user to type the same word as an input value even if it's capitalised or in full capitals.
 
+![Input option](docs/caps_input.png)
+
 ### Visual Features
 
 I created visual pictures in the terminal for items that can be collected throughout the mansion.
