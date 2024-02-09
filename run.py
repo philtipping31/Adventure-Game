@@ -61,7 +61,7 @@ def intro():
     time.sleep(2)
     print("Your mission is to escape the mansion or accept your fate.\n")
     time.sleep(2)
-    print("")
+    print(Fore.CYAN + "")
     print("GAME OBJECTIVE\n")
     print("")
     print("Navigate through the mansion and search for clues.\n")
@@ -75,6 +75,8 @@ def intro():
     print("Locate the clues and items to find a way to escape.\n")
     time.sleep(2)
     print("GOOD LUCK!\n")
+    print("")
+    print(Style.RESET_ALL)
     time.sleep(4)
     start_game()
 
@@ -92,9 +94,10 @@ def start_game():
         escape_mansion = input("Would you like to attempt your escape"
                                " from the HAUNTED MANSION? (yes/no):\n> ")
         if escape_mansion.lower() == "no":
-            print("\nYou have accepted your fate...\n")
+            print(Fore.RED + "\nYou have accepted your fate...\n")
             time.sleep(1)
             print("Enjoy your stay at the HAUNTED MANSION!\n")
+            print(Style.RESET_ALL)
             time.sleep(1)
             play_again()
             break
@@ -102,7 +105,7 @@ def start_game():
             hallway()
             break
         else:
-            print(Fore.RED + "Incorrect input. Please type 'yes' or 'no'.\n")
+            print(Fore.RED + "\nIncorrect input. Please type 'yes' or 'no'.\n")
             print(Style.RESET_ALL)
             continue
 
@@ -302,7 +305,7 @@ def ballroom_continue():
             print("You feel a metallic item under your hands\n")
             time.sleep(1)
             print("It's a KEY! This could be really useful\n")
-            print("""
+            print(Fore.YELLOW + """
             ┌──────┐
             │|----|│
             │|    |├────────┬─┬──┬─┐
@@ -310,9 +313,11 @@ def ballroom_continue():
             └──────┘        └─┘  └─┘
                   """)
             time.sleep(1)
+            print(Style.RESET_ALL)
             backpack.append("Key")
-            print("Backpack:")
+            print(Fore.MAGENTA + "Backpack:")
             print(backpack)
+            print(Style.RESET_ALL)
             global key
             key = True
             time.sleep(3)
@@ -344,16 +349,18 @@ def ballroom_continue():
             time.sleep(2)
             print("You turn and run for in the direction of the door\n")
             time.sleep(2)
-            print("The beast is two quick and grabs you\n")
+            print("The beast is too quick and grabs you\n")
             time.sleep(2)
             print("You have been eaten alive\n")
             time.sleep(1)
-            print("Bad luck!\n")
+            print(Fore.RED + "Bad luck!\n")
             print("You have been consumed by THE HAUNTED MANSION!\n")
+            print(Style.RESET_ALL)
             time.sleep(2)
             play_again()
         else:
-            print("\nIncorrect input, please choose: a, b or c\n")
+            print(Fore.RED + "\nIncorrect input, please choose: a, b or c\n")
+            print(Style.RESET_ALL)
             continue
 
 
@@ -459,8 +466,9 @@ def library_continue():
                 time.sleep(1)
                 print("You are dead in a matter of minutes\n")
                 time.sleep(3)
-                print("Bad luck!\n")
+                print(Fore.RED + "Bad luck!\n")
                 print("You have been consumed by THE HAUNTED MANSION!\n")
+                print(Style.RESET_ALL)
                 time.sleep(2)
                 play_again()
             elif options == 4 and hammer is True:
@@ -487,10 +495,14 @@ def library_continue():
                       "way out...\n")
                 hallway()
             else:
-                print(f"\nIncorrect input. Please choose {decisions}.\n")
+                print(Fore.RED + f"\nIncorrect input. Please choose"
+                      " {decisions}.\n")
+                print(Style.RESET_ALL)
                 continue
         except ValueError:
-            print(f"\nIncorrect input. Please choose {decisions}.\n")
+            print(Fore.RED + f"\nIncorrect input. Please choose"
+                  " {decisions}.\n")
+            print(Style.RESET_ALL)
             continue
 
 
@@ -564,10 +576,11 @@ def dining_hall_continue():
     print("")
     print("You line the two pieces of paper together and it reads...\n")
     time.sleep(2)
-    print("Home: The Haunted Mansion")
+    print(Fore.GREEN + "Home: The Haunted Mansion")
     print("Owner: Dr S Cary")
     print("Spare Key: Safe")
     print("Mansion Blueprints: Enclosed")
+    print(Style.RESET_ALL)
     time.sleep(3)
     print("")
     print("This could be really helpful...\n")
@@ -576,6 +589,7 @@ def dining_hall_continue():
     time.sleep(3)
     print("You find them! But only for the ground floor...\n")
     time.sleep(3)
+    print(Fore.BLUE + "")
     print(" -------------------------------------------------- ")
     print("|                                                  |")
     print("|                    Ballroom                      |")
@@ -596,14 +610,16 @@ def dining_hall_continue():
     print("|                 |           |                    |")
     print("|----------------------    ------------------------| ")
     print("")
+    print(Style.RESET_ALL)
     while True:
         choice = input("Do you:\na) Take the letter and blueprints\n"
                        "b) Decide they are of no use and leave them"
                        " behind.\n> ")
         if choice.lower() == "a":
             backpack.append("Mansion Details")
-            print("Backpack:")
+            print(Fore.MAGENTA + "Backpack:")
             print(backpack)
+            print(Style.RESET_ALL)
             global blueprints
             blueprints = True
             print("")
@@ -616,7 +632,8 @@ def dining_hall_continue():
             print("You head back to the hallway")
             hallway()
         else:
-            print("\nIncorrect input. Please type 'a' or 'b'\n")
+            print(Fore.RED + "\nIncorrect input. Please type 'a' or 'b'\n")
+            print(Style.RESET_ALL)
             continue
 
 
@@ -651,7 +668,8 @@ def office():
             time.sleep(2)
             break
         else:
-            print("\nIncorrect input. Please type 'a' or 'b'")
+            print(Fore.RED + "\nIncorrect input. Please type 'a' or 'b'")
+            print(Style.RESET_ALL)
             continue
     print("\nYou have another decision to make...\n")
     time.sleep(2)
@@ -693,8 +711,9 @@ def office():
                 time.sleep(2)
                 print("You have fallen to your death.\n")
                 time.sleep(3)
-                print("Bad luck!\n")
+                print(Fore.RED + "Bad luck!\n")
                 print("You have been consumed by THE HAUNTED MANSION!\n")
+                print(Style.RESET_ALL)
                 time.sleep(2)
                 play_again()
             elif options == 3 and code is True:
@@ -707,7 +726,8 @@ def office():
                 if correct_code == "7462":
                     print("You remembered it correctly!!\n")
                     time.sleep(2)
-                    print("ACCESS GRANTED\n")
+                    print(Fore.GREEN + "ACCESS GRANTED\n")
+                    print(Style.RESET_ALL)
                     time.sleep(2)
                     print("The safe opens and there you see...\n")
                     time.sleep(2)
@@ -719,13 +739,17 @@ def office():
                     time.sleep(2)
                     game_win()
                 else:
-                    print("code incorrect, please try again.")
+                    print(Fore.RED + "Code incorrect, please try again.")
+                    print(Style.RESET_ALL)
                     continue
             else:
-                print(f"\nIncorrect input. Please choose {option}.\n")
+                print(Fore.RED + f"\nIncorrect input. Please choose"
+                      " {option}.\n")
+                print(Style.RESET_ALL)
                 continue
         except ValueError:
-            print(f"\nIncorrect input. Please choose {option}.\n")
+            print(Fore.RED + f"\nIncorrect input. Please choose {option}.\n")
+            print(Style.RESET_ALL)
             continue
 
 
@@ -747,8 +771,9 @@ def stairs():
     print("You are caught by the ghostly figure chasing you and fall to "
           "a painful death\n")
     time.sleep(2)
-    print("Bad luck!\n")
+    print(Fore.RED + "Bad luck!\n")
     print("You have been consumed by THE HAUNTED MANSION!\n")
+    print(Style.RESET_ALL)
     time.sleep(2)
     play_again()
 
@@ -779,7 +804,8 @@ def play_again():
             print("\nNever mind... Thanks for playing and come back soon!\n")
             end_game()
         else:
-            print("Incorrect input. Please type 'yes' or 'no'.")
+            print(Fore.RED + "Incorrect input. Please type 'yes' or 'no'.")
+            print(Style.RESET_ALL)
             continue
 
 
