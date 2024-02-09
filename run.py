@@ -485,7 +485,7 @@ def library_continue():
                       "on the pieces\n")
                 time.sleep(2)
                 print(Fore.GREEN + "You match them all together and it"
-                      "reads:\n "
+                      " reads:\n "
                       "ACCESS CODE: 7462\n")
                 print(Style.RESET_ALL)
                 global code
@@ -731,7 +731,7 @@ def office():
                 time.sleep(2)
                 correct_code = input("Type in your code:\n> ")
                 if correct_code == "7462":
-                    print("You remembered it correctly!!\n")
+                    print("\nYou remembered it correctly!!\n")
                     time.sleep(2)
                     print(Fore.GREEN + "ACCESS GRANTED\n")
                     print(Style.RESET_ALL)
