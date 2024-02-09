@@ -25,13 +25,14 @@ As a first-time user I want to know the purpose of the game.
 
 As a first-time user I want to know how to play the game. 
 
-As a first-time user I want to be told if I have entered text incorrectly.
+As a first-time user I want to be told if I have entered text incorrectly into the input areas.
 
 As a first-time user I want to be able to have the option of playing again if I do not win or even if I do win.
 
 As a first-time user I want to know when I have lost and when I have won the game. 
 
 As a returning user, all of the above experiences should also apply.
+
 
 ## Features
 
@@ -330,9 +331,19 @@ The below flow chart was used as a reference to ensure each function performed t
 
 
 
+#### Python Modules
+
+ | Test                                                                                                         | Action                                                                                               | Expected                                                                   | Result |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------ |
+| Does the import of sys os correctly clear the terminal when called                                           | Go to locations of the code where clear_display() is called and ensure the terminal clears           | Terminal clears all previous text and continues with the code next inline. | Pass   |
+| Using Colorama. Does the text show in the colour set against it and clear afterwards correctly               | Go through the game choosing each option where the text is instructed to chane colour.               | Terminal displays text in the colour set in the code.                      | Pass   |
+| Using Time. Does the terminal correctly delay the next line of text displaying when time.sleep() is in place | Play through the game and ensure the correct delay is replicated in the terminal as set in the code. | Text is delayed correctly.                                                 | Pass   |
+
+
+
 ### Bugs / Other
 
-Most bugs occurred due to typos in functions and time.sleep typos.
+I had a bug when the user enter the access code incorrectly more than once. I finally realised that the 'option' merge section had a typo and was bringing in the wrong numbers.
 
 I had an issue with declaring global variables as they were called before. This was due to referencing them more than once in a function based on the way I wanted to set it up. I decided to separate functions with _continue when declaring global variables as 'True' or 'False'.
 
