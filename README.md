@@ -35,6 +35,12 @@ As a returning user, all of the above experiences should also apply.
 
 ## Features
 
+### Objective
+
+The objective of the game is shown in the terminal so the user can clearly understand the purpose of the game and what they need to do.
+
+![Objective](docs/objective.png)
+
 ### User Input
 
 Interaction with the game is the main part of The Haunted Mansion. All rooms will require some form of interaction where a user is required to make a decision, which can result in either collecting items, moving through rooms, discovering dead ends, encountering enemies that may result in death.
@@ -42,6 +48,10 @@ Interaction with the game is the main part of The Haunted Mansion. All rooms wil
 ![User Input](docs/user_input.png)
 
 ![User Input Rooms](docs/user_input_rooms.png)
+
+The user will also be notified if any incorrect input has been added to the terminal.
+
+![Incorrect input](docs/incorrect_input.png)
 
 ### Visual Features
 
@@ -53,7 +63,7 @@ I created visual pictures in the terminal for items that can be collected throug
 ![Key](docs/key.png) 
 
 
-![Blueprints](docs/floorplan.png)
+![Blueprints](docs/blueprints.png)
 
 ### Backpack
 
